@@ -1,0 +1,14 @@
+@startuml Global Styles
+'
+' CLASS DIAGRAMS
+'
+' Hide (C) icon on classes
+hide circle
+' Use +-#~ symbols for visibility on classes
+skinparam classAttributeIconSize 0
+
+'
+' ACTIVITY DIAGRAMS
+'
+skinparam conditionStyle diamond
+@enduml

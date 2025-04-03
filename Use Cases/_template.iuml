@@ -1,0 +1,55 @@
+@startuml Use Case Template
+!include_once ../style.iuml
+' other includes, e.g., !include_once users.iuml
+
+(My Use Case) as UC1
+actor :My Actor: as A
+A -- UC1
+@enduml
+
+# Name
+
+My Use Case
+
+# Participating Actors
+
+- My Actor
+- My Other Actor
+
+# Preconditions
+
+> Optional
+
+- A
+- B
+- C
+
+# Flow of Events
+
+- X
+- Y
+- Z
+
+# Alternative Flow of Events
+
+> Optional
+
+- U
+- V
+- W
+
+# Postconditions
+
+> Optional
+
+- D
+- E
+- F
+
+# Quality Requirements
+
+> Optional
+
+- 1
+- 2
+- 3

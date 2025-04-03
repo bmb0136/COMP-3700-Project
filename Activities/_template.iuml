@@ -1,0 +1,22 @@
+@startuml Activity Template
+!include_once ../style.iuml
+' other includes
+
+' define swim lanes (optional)
+|S1| Swimlane 1
+|S2| Swimlane 2
+|S3| Swimlane 3 
+
+start
+
+|S1|
+:Do A;
+|S2|
+:Do B;
+|S3|
+:Do C;
+
+' the start/stop nodes can be put in any swimlane too!
+|S1|
+stop
+@enduml
