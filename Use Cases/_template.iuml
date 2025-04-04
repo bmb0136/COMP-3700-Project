@@ -26,17 +26,17 @@ My Use Case
 
 # Flow of Events
 
-- X
-- Y
-- Z
+1. A
+2. B
+3. C
 
 # Alternative Flow of Events
 
 > Optional
 
-- U
-- V
-- W
+1a. U
+2a. V
+3a. W
 
 # Postconditions
 
