@@ -1,4 +1,4 @@
-@startuml Use Case Template
+@startuml My Use Case
 !include_once ../style.iuml
 ' other includes, e.g., !include_once users.iuml
 
@@ -6,10 +6,6 @@
 actor :My Actor: as A
 A -- UC1
 @enduml
-
-# Name
-
-My Use Case
 
 # Participating Actors
 
