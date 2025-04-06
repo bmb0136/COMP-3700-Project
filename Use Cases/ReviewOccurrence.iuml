@@ -1,9 +1,9 @@
 @startuml Review Occurence
 rectangle "Occurrences"{
-(Review Occurence) as RevOcc
+(Review Occurrence)
 }
 actor :Admin:
-Admin -- RevOcc
+Admin -- (Review Occurrence)
 
 @enduml
 
@@ -17,17 +17,18 @@ Admin -- RevOcc
 
 # Flow of Events
 
-1. Admin clicks on review Occurence
-    2. System displyes all information of the occurence
+1. Admin clicks on review Occurrence
+    2. System displyes all information of the occurrence
     3. system displyes a notes page and buttons for action that the admin can take
-4. Admin adds notes to Occurece
-5. Admin exits the occurence review
-6. system exits the occurence review and saves the notes and changes to occurence
+4. Admin adds notes to Occurrece
+5. Admin exits the occurrence review
+6. system exits the occurrence review and saves the notes and changes to occurrence
 
 # Alternative Flow of Events
 
-5a. admin clicks close Occurence
-6a. System sets the Occurence to Closed
+5a. admin clicks close Occurrence
+6a. System calls CloseOccurrence
+7a. System exits the occurence review and saves the notes and changes to occurrence
 
 # Postconditions
 Admin loged in
