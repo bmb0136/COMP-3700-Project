@@ -1,0 +1,26 @@
+@startuml Configure Occurrence Types
+!include_once ../style.iuml
+actor :Admin:
+rectangle "Occurrences" {
+  Admin -- (Configure Occurrence Types)
+}
+@enduml
+
+# Participating Actors
+
+- Admin
+
+# Preconditions
+
+- The Admin is authenticated
+
+# Flow of Events
+
+1. The Admin clicks on a "Edit Occurrence Types" button
+2. The system displays a list of Occurrence types
+3. The Admin can rename, enable, disable, add, and remove Occurrence types from the list
+4. The Admin clicks on a "Submit" button
+
+# Alternative Flow of Events
+
+1. If the Admin attempts to remove or disable all of the Ocurrence types in the list, the system will display an error message and reject the change.

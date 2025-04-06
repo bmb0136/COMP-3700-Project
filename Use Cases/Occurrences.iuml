@@ -1,0 +1,4 @@
+@startuml Occurrences
+!include_once ConfigureOccurrenceTypes.iuml
+left to right direction
+@enduml
