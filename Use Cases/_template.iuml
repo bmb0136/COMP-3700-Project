@@ -1,7 +1,4 @@
 @startuml My Use Case
-!include_once ../style.iuml
-' other includes, e.g., !include_once users.iuml
-
 (My Use Case) as UC1
 actor :My Actor: as A
 A -- UC1

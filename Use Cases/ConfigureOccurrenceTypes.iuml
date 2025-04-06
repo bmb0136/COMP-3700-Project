@@ -1,5 +1,4 @@
 @startuml Configure Occurrence Types
-!include_once ../style.iuml
 actor :Admin:
 rectangle "Occurrences" {
   Admin -- (Configure Occurrence Types)
