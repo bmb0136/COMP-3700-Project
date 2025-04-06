@@ -1,7 +1,9 @@
 @startuml My Use Case
-(My Use Case) as UC1
-actor :My Actor: as A
-A -- UC1
+actor :MyActor:
+rectangle "Some Group" {
+  (My Use Case) as MyUse
+}
+MyActor -- MyUse
 @enduml
 
 # Participating Actors
