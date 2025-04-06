@@ -20,6 +20,7 @@ rectangle "Occurrences" {
 2. The system displays a list of Occurrence types
 3. The Admin can rename, enable, disable, add, and remove Occurrence types from the list
 4. The Admin clicks on a "Submit" button
+5. The system displays a confirmation message
 
 # Alternative Flow of Events
 
