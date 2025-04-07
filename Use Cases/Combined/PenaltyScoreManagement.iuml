@@ -2,4 +2,5 @@
 !include ../../style.iuml
 left to right direction
 !include ../ConfigureDefaultPointValues.iuml
+!include ../ConfigureTardinessIntervals.iuml
 @enduml

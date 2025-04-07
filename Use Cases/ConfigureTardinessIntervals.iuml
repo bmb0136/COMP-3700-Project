@@ -1,0 +1,32 @@
+@startuml Configure Tardiness Intervals
+actor :Admin:
+rectangle "Penalty Score Management" {
+  (Configure Tardiness Intervals) as ConfTardInt
+}
+Admin -- ConfTardInt
+@enduml
+
+# Participating Actors
+
+- Admin
+
+# Preconditions
+
+The Admin is authenticated
+
+# Flow of Events
+
+1. The Admin clicks a "Edit Tardiness Intervals" button
+2. The system displays a editable list of of time intervals and their Point values
+3. The Admin edits the intervals
+4. The Admin clicks a "Save" button
+5. The system displays a confirmation message
+
+# Alternative Flow of Events
+
+5a. If any of the intervals overlap or are not in increasing order, then the system displays an error message
+
+# Quality Requirements
+
+- The intervals should be displayed in minutes
+- Other than the first interval, the start time of each interval should be fixed as the end time of the previous interval
