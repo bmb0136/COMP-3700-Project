@@ -1,0 +1,32 @@
+@startuml QueryMentorProfiles
+actor :Admin:
+rectangle "Mentor Profiles" {
+  (Query Mentor Profiles) as QueryProf
+}
+Admin -- QueryProf
+@enduml
+
+/'
+# Participating Actors
+
+- Admin
+
+# Preconditions
+
+- The Admin is authenticated
+
+# Flow of Events
+
+1. Admin Clicks show Mentors
+2. database pulls a all mentors as a list
+3. List of all Mentors displayed to the admin
+4. Admin closes menu
+
+# Alternative Flow of Events
+4a. Admin opens another context menu (override profile, summarize mentor acivity, etc)
+
+4a. Admin Exits without saving local changes discarded
+5a. Menu Closed and returned to Mentor Profile
+
+# Quality Requirements
+Should quickly show all mentor profiles in a easy to read list with a drop down (think 3 dots next to name) menu to access what the admin is allowed to edit (override profile, summarize, etc)
