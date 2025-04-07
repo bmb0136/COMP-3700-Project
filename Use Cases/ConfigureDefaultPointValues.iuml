@@ -1,4 +1,4 @@
-@startuml My Use Case
+@startuml Configure Default Point Values
 actor :Admin:
 rectangle "Penalty Score Management" {
   (Configure Default Point Values) as ConfDefPts
