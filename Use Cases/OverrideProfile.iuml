@@ -1,0 +1,34 @@
+@startuml OverrideProfile
+actor :Admin:
+rectangle "Mentor Profiles" {
+  (Override Profile) as OverProf
+}
+Admin -- OverProf
+@enduml
+
+/'
+# Participating Actors
+
+- Admin
+
+# Preconditions
+
+- The Admin is authenticated
+
+# Flow of Events
+
+1. Admin Clicks a Mentors Profile
+2. Admin clicks Override Profile
+3. Admin Makes Changes to Mentors Profile
+4. Admin Saves Changes and Changes are written serverside
+5. Menu closed Mentor Profile Page refreshed and returned to with updated changes
+
+# Alternative Flow of Events
+
+
+4a. Admin Exits without saving local changes discarded
+5a. Menu Closed and returned to Mentor Profile
+
+# Quality Requirements
+
+Easy to edit interface, Ensure it is clear that this is not request changes and will write to the profile, shows changes after written
