@@ -1,0 +1,23 @@
+@startuml Update Mentor Point Total
+actor :Admin:
+rectangle "Penalty Score Management" {
+  (Update Mentor Point Total) as UpdMtrPts
+}
+Admin -- UpdMtrPts
+@enduml
+
+# Participating Actors
+
+- Admin
+
+# Preconditions
+
+The Admin is authenticated
+
+# Flow of Events
+
+1. The Admin clicks a "Edit Points" button (in a Mentor's profile)
+2. The system displays a menu/dialog with a number input with the Mentor's current Point value
+3. The Admin edits the Point value
+4. The Admin clicks a "Save" button
+5. The system displays a confirmation message
