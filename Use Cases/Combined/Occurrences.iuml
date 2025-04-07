@@ -1,0 +1,7 @@
+@startuml Occurrences
+!include_once ../../style.iuml
+left to right direction
+!include_once ../ConfigureOccurrenceTypes.iuml
+!include_once ../ReviewOccurrence.iuml
+!include_once ../CloseOccurrence.iuml
+@enduml
