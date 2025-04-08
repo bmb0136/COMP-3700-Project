@@ -1,0 +1,50 @@
+@startuml My Use Case
+actor :Admin:
+rectangle "Occurrences" {
+  (Configure Default Actions\nfor Occurrences) as ConfDefActOcc
+}
+Admin -- ConfDefActOcc
+@enduml
+
+# Participating Actors
+
+- My Actor
+- My Other Actor
+
+# Preconditions
+
+> Optional
+
+- A
+- B
+- C
+
+# Flow of Events
+
+1. A
+2. B
+3. C
+
+# Alternative Flow of Events
+
+> Optional
+
+1a. U
+2a. V
+3a. W
+
+# Postconditions
+
+> Optional
+
+- D
+- E
+- F
+
+# Quality Requirements
+
+> Optional
+
+- 1
+- 2
+- 3
