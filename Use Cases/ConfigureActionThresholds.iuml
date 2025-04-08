@@ -1,0 +1,23 @@
+@startuml Configure Action Thresholds
+actor :Admin:
+rectangle "Penalty Score Management" {
+  (Configure Action Thresholds) as ConfActThr
+}
+Admin -- ConfActThr
+@enduml
+
+# Participating Actors
+
+- Admin
+
+# Preconditions
+
+- The Admin is authenticated
+
+# Flow of Events
+
+1. The Admin clicks a "Edit Action Thresholds" button
+2. The Admin is presented with a list of Actions and Point thresholds
+3. The Admin edits the thresholds
+4. The Admin clicks a "Save" button
+5. The system displays a confirmation message
