@@ -1,0 +1,7 @@
+@startuml Penalty Score Management
+!include ../../style.iuml
+left to right direction
+!include ../ConfigureDefaultPointValues.iuml
+!include ../ConfigureTardinessIntervals.iuml
+!include ../ConfigureActionThresholds.iuml
+@enduml

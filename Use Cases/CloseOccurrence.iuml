@@ -6,7 +6,6 @@ rectangle "Occurrences"{
 actor :Admin:
 Admin -- (Close Occurrence)
 (Close Occurrence) .> (Review Occurrence): <<extend>>
-Admin -- (Review Occurrence)
 
 @enduml
 

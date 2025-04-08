@@ -1,0 +1,23 @@
+@startuml Configure Default Point Values
+actor :Admin:
+rectangle "Penalty Score Management" {
+  (Configure Default Point Values) as ConfDefPts
+}
+Admin -- ConfDefPts
+@enduml
+
+# Participating Actors
+
+- Admin
+
+# Preconditions
+
+The Admin is authenticated
+
+# Flow of Events
+
+1. The Admin clicks a "Edit Default Points" button
+2. The system displays a list of Occurrence types and Point values
+3. The Admin modifies the Point values
+4. The Admin clicks a "Save" button
+5. The system displays a confirmation message
