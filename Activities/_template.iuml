@@ -1,7 +1,4 @@
 @startuml Activity Template
-!include_once ../style.iuml
-' other includes
-
 ' define swim lanes (optional)
 |S1| Swimlane 1
 |S2| Swimlane 2
