@@ -4,4 +4,5 @@ left to right direction
 !include ../ConfigureDefaultPointValues.iuml
 !include ../ConfigureTardinessIntervals.iuml
 !include ../ConfigureActionThresholds.iuml
+!include ../UpdateMentorPointTotal.iuml
 @enduml
