@@ -1,4 +1,4 @@
-@startuml My Use Case
+@startuml Summarize Mentor Activity
 actor :Admin:
 rectangle "Mentor Profiles" {
   (Summarize Mentor Activity) as summarize
