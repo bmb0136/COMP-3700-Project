@@ -1,0 +1,5 @@
+@startuml Authentication
+!include ../../style.iuml
+left to right direction
+!include ../LogIn.iuml
+@enduml
