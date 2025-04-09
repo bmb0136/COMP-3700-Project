@@ -1,0 +1,44 @@
+@startuml Edit Occurence
+rectangle "Occurrences"{
+(Edit Occurrence)
+}
+actor :Admin:
+Admin -- (Edit Occurrence)
+@enduml
+
+# Participating Actors
+
+- Admin
+
+# Preconditions
+- Admin Loged in
+
+# Flow of Events
+
+1. Admin Presses Edit Occurrence button
+    2. System opens Edit Occurence window and displayes all relevent information ie. type, mentors, notes ... 
+3. Admin makes changes to feilds in Occurence edit window.
+4. Admin Clicks save changes
+    5. System saves changes and logs changes in Points
+6. Admin Clicks close Edit Occurrence
+    7. System Closes Edit Occurence
+    8. System Returns to previous page that admin clicked Edit Occurrecne on
+
+# Alternative Flow of Events
+
+4a. Admin Clicks close Edit Occurrence
+    5a. System Prompts Admin if they want to save before exiting
+6a. Admin Clicks yes
+    7a. System saves changes and logs changes in Points
+    8a. System Closes Edit Occurence
+    9a. System Returns to previous page that admin clicked Edit Occurrecne on
+
+4b. Admin Clicks close Edit Occurrence
+    5b. System Prompts Admin if they want to save before exiting
+6b. Admin Clicks no
+    7b. System Closes Edit Occurence
+    8a. System Returns to previous page that admin clicked Edit Occurrecne on
+
+# Postconditions
+
+-Admin Loged in
