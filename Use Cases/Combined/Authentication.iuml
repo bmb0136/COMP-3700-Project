@@ -3,4 +3,8 @@
 left to right direction
 !include ../LogIn.iuml
 !include ../LogOut.iuml
+actor :Mentor:
+actor :Admin:
+Mentor --|> User
+Admin --|> User
 @enduml
