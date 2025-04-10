@@ -1,0 +1,25 @@
+@startuml MarkMentorAbsent
+actor :Absence_Timer:
+rectangle "Sessions" {
+  (Mark Mentor as Absent) as MarkAbsent
+}
+rectangle "Occurrences" {
+  (Report Occurrence) as Report
+}
+Absence_Timer -- MarkAbsent
+MarkAbsent .> Report : include
+@enduml
+
+/'
+# Participating Actors
+
+- Absence Timer
+
+# Preconditions
+
+- Mentor has Not Started Session
+- Current Time greater than MaxTardinessInterval
+
+# Flow of Events
+1. Include ReportOccurence
+2. System reports that the mentor is absent
