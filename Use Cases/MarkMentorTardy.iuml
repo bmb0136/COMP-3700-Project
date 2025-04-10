@@ -7,8 +7,8 @@ rectangle "Sessions" {
 rectangle "Occurrences" {
   (Report Occurrence) as Report
 }
-Tardy .> Start : extends
-Tardy ..> Report : include
+Tardy .> Start : <<extend>>
+Tardy ..> Report : <<include>>
 
 @enduml
 

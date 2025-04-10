@@ -7,7 +7,7 @@ rectangle "Occurrences" {
   (Report Occurrence) as Report
 }
 AbsenceTimer -- MarkAbsent
-MarkAbsent ..> Report : include
+MarkAbsent ..> Report : <<include>>
 @enduml
 
 /'
