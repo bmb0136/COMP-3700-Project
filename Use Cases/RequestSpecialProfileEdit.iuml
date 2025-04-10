@@ -25,7 +25,7 @@ Admin -- req
 1. Mentor requests a special profile edit
 2. Admin receives the request
 3. Admin approves the request
-5. system notifies the Mentor of the approval
+4. system notifies the Mentor of the approval
 
 # Alternative Flow of Events
 
