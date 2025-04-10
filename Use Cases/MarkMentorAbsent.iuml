@@ -1,12 +1,12 @@
 @startuml MarkMentorAbsent
-actor :Absence_Timer:
+actor :Absence Timer: as AbsenceTimer
 rectangle "Sessions" {
   (Mark Mentor as Absent) as MarkAbsent
 }
 rectangle "Occurrences" {
   (Report Occurrence) as Report
 }
-Absence_Timer -- MarkAbsent
+AbsenceTimer -- MarkAbsent
 MarkAbsent ..> Report : include
 @enduml
 
