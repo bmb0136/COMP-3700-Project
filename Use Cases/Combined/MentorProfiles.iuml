@@ -5,4 +5,5 @@ left to right direction
 !include ../EditProfile.iuml
 !include ../RequestSpecialProfileEdit.iuml
 !include ../SummarizeMentorActivity.iuml
+!include ../QueryMentorProfiles.iuml
 @enduml
