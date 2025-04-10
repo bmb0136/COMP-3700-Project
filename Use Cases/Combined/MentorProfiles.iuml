@@ -2,4 +2,7 @@
 !include ../../style.iuml
 left to right direction
 !include ../OverrideProfile.iuml
+!include ../EditProfile.iuml
+!include ../RequestSpecialProfileEdit.iuml
+!include ../SummarizeMentorActivity.iuml
 @enduml

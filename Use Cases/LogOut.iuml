@@ -1,0 +1,17 @@
+@startuml Log Out
+actor :User: <<abstract>>
+rectangle "Authentication" {
+  (Log Out) as LogOut
+}
+User -- LogOut
+@enduml
+
+# Participating Actors
+
+- The User is authenticated
+
+# Flow of Events
+
+1. The User clicks a "Log out" button
+2. The User confirms the log out action
+3. The User is logged out

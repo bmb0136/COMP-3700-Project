@@ -1,0 +1,5 @@
+@startuml Notifications
+!include ../../style.iuml
+left to right direction
+!include ../ConfigureNotificationPrefrences.iuml
+@enduml

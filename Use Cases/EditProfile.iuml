@@ -1,0 +1,22 @@
+@startuml Edit Profile
+actor :Mentor:
+rectangle "Mentor Profiles" {
+  (Edit Profile) as Edit
+}
+Mentor -- Edit
+@enduml
+
+# Participating Actors
+
+- Mentor
+
+# Preconditions
+
+- Mentor is authenticated
+- This use case **extends** the RequestSpecialProfileEdit and is invoked when the Admin approves the Mentor's profile change
+
+# Flow of Events
+
+1. mentor selects changes to be made to their profile
+2. mentor clicks a "Save" button
+3. system saves the changes to the profile

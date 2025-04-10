@@ -1,0 +1,21 @@
+@startuml Summarize Mentor Activity
+actor :Admin:
+rectangle "Mentor Profiles" {
+  (Summarize Mentor Activity) as summarize
+}
+Admin -- summarize
+@enduml
+
+# Participating Actors
+
+- Admin
+
+# Preconditions
+
+- admin is authenticated
+
+# Flow of Events
+
+1. admin clicks a "Summarize Mentor Activity" button
+2. system displays a summary of mentor activity
+
