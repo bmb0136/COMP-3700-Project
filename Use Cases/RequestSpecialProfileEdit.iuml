@@ -3,6 +3,8 @@ actor :Mentor:
 actor :Admin:
 rectangle "Mentor Profiles" {
   (Request Special Profile Edit) as req
+  (Edit Profile) as Edit
+  req .> Edit : <<extends>>
 }
 Mentor -- req
 Admin -- req
@@ -23,7 +25,7 @@ Admin -- req
 1. Mentor requests a special profile edit
 2. Admin receives the request
 3. Admin approves
-4. system applies the special profile edit
+4. system applies the special profile edit via Edit Profile
 5. system notifies the Mentor of the approval
 
 # Alternative Flow of Events
