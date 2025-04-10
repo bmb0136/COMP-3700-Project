@@ -1,0 +1,42 @@
+@startuml Report Occurrence
+rectangle "Occurrences"{
+(Report Occurrence)
+}
+actor :Mentor:
+Mentor -- (Report Occurrence)
+@enduml
+
+# Participating Actors
+
+- Mentor
+
+# Preconditions
+- Mentor Loged in
+
+# Flow of Events
+
+1. Mentor Presses Report Occurrence button
+    2. System opens Report Occurence window and displayes all relevent information and options 
+3. Mentor makes changes to feilds in Report Occurence window. ie slects type, notes, good, bad
+4. Mentor Clicks save changes
+    5. System saves changes
+6. Mentor Clicks close Report Occurrence
+    7. System Closes Report Occurence
+    8. System Returns to previous page that Mentor clicked Report Occurrecne on
+
+# Alternative Flow of Events
+
+4a. Mentor Clicks close Report Occurrence
+    5a. System Prompts Mentor if they want to exit before saving
+6a. Mentor Clicks no
+    7a. System Return to Report menue
+
+4b. Mentor Clicks close Report Occurrence
+    5b. System Prompts Mentor if they want to exit before saving
+6b. Mentor Clicks yes
+    7b. System Closes Report Occurence
+    8a. System Returns to previous page that Mentor clicked Report Occurrecne on
+
+# Postconditions
+
+-Mentor Loged in

@@ -7,4 +7,5 @@ left to right direction
 !include ../ConfigureDefaultActionsForOccurrences.iuml
 !include ../EditOccurrence.iuml
 !include ../QuerryOccurrence.iuml
+!include ../ReportOccurrence.iuml
 @enduml
