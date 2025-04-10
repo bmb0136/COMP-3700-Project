@@ -1,0 +1,33 @@
+@startuml Request Special Profile Edit
+actor :Mentor:
+actor :Admin:
+rectangle "Mentor Profiles" {
+  (Request Special Profile Edit) as req
+}
+Mentor -- req
+Admin -- req
+@enduml
+
+# Participating Actors
+
+- Mentor
+- Admin
+
+# Preconditions
+
+- Mentor is authenticated
+- Admin is authenticated
+
+# Flow of Events
+
+1. Mentor requests a special profile edit
+2. Admin receives the request
+3. Admin approves
+4. system applies the special profile edit
+5. system notifies the Mentor of the approval
+
+# Alternative Flow of Events
+
+
+3a. Admin rejects the request
+4a. system notifies the Mentor of the rejection
