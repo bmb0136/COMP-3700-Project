@@ -7,9 +7,8 @@ rectangle "Sessions" {
 rectangle "Occurrences" {
   (Report Occurrence) as Report
 }
-Mentor -- Start
 Tardy .> Start : extends
-Tardy .> Report : include
+Tardy ..> Report : include
 
 @enduml
 
