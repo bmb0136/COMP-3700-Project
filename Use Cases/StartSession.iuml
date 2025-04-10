@@ -15,11 +15,12 @@ Mentor -- Start
 # Preconditions
 
 - Mentor Present
-- Current Time less than TardinessInterval
+- Current Time less than MaxTardinessInterval
 
 # Flow of Events
 
 1. Mentor clicks start session
+
 
 
 # Quality Requirements

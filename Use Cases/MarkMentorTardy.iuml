@@ -1,0 +1,22 @@
+@startuml MarkMentorTardy
+actor :Mentor:
+rectangle "Sessions" {
+  (Start Session) as Start
+  (Mark Mentor as Tardy) as Tardy
+}
+rectangle "Occurrences" {
+  (Report Occurrence) as Report
+}
+Mentor -- Start
+Tardy .> Start : extends
+Tardy .> Report : include
+
+@enduml
+
+/'
+# EntryCondition
+-Session started when current time > TardinessInterval
+
+# Flow of Events
+1. Include ReportOccurence
+2. System reports that the mentor was tardy
