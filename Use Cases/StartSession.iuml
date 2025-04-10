@@ -1,0 +1,26 @@
+@startuml StartSession
+actor :Mentor:
+rectangle "Sessions" {
+  (Start Session) as Start
+}
+Mentor -- Start
+@enduml
+
+
+/'
+# Participating Actors
+
+- Mentor
+
+# Preconditions
+
+- Mentor Present
+- Current Time less than TardinessInterval
+
+# Flow of Events
+
+1. Mentor clicks start session
+
+
+# Quality Requirements
+Should display both when the session needs to be started when the mentor is considered late and when the mentor is considered absent
