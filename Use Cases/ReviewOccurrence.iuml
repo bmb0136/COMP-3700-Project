@@ -13,26 +13,13 @@ Admin -- (Review Occurrence)
 
 # Preconditions
 
-- Admin Loged in
+- The Admin is authenticated
 
 # Flow of Events
 
-1. Admin clicks on review Occurrence
-    2. System displyes all information of the occurrence
-    3. system displyes a notes page and buttons for action that the admin can take
-4. Admin adds notes to Occurrece
-5. Admin exits the occurrence review
-6. system exits the occurrence review and saves the notes and changes to occurrence
-
-# Alternative Flow of Events
-
-5a. admin clicks close Occurrence
-6a. System calls CloseOccurrence
-7a. System exits the occurence review and saves the notes and changes to occurrence
-
-# Postconditions
-Admin loged in
-
-# Quality Requirements
-
-User interface is clean and dosent look like a windows prototype that is still there.
+1. The Admin clicks on Occurrence in the Admin Summary Screen
+2. The system displays a menu all information of the Occurrence
+3. The system displays a form for taking notes on the Occurrence and buttons for the actions the Admin can do with the Occurrence (see CloseOccurrence and EditOccurrence)
+4. The Admin add or edit the notes in the form
+5. The Admin clicks a "Save" button
+6. The system displays a confirmation message

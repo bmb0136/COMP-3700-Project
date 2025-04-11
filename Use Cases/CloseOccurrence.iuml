@@ -15,21 +15,10 @@ Admin -- (Close Occurrence)
 
 # Preconditions
 
-- Admin Loged in
-- Has Occurrence included
+- The Admin is authenticated
+- This use case **extends** ReviewOccurrence, and is initiated when the Admin clicks a "Close" button in the menu of an Occurrence
 
 # Flow of Events
 
-1. Admin clicks on Close Occurrence
-    2. System sets Occurence to closed
-
-# Alternative Flow of Events
-
-
-# Postconditions
-Admin loged in
-Occurrence is Closed
-
-# Quality Requirements
-
-User interface is clean.
+2. The system notifies the Mentor the Occurrence is associated with that the Occurrence was closed
+1. The system displays a confirmation message

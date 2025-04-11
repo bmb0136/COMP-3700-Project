@@ -11,32 +11,22 @@ Mentor -- (Report Occurrence)
 - Mentor
 
 # Preconditions
-- Mentor Loged in
+
+- The Mentor is authenticated
 
 # Flow of Events
 
-1. Mentor Presses Report Occurrence button
-    2. System opens Report Occurence window and displayes all relevent information and options 
-3. Mentor makes changes to feilds in Report Occurence window. ie slects type, notes, good, bad
-4. Mentor Clicks save changes
-    5. System saves changes
-6. Mentor Clicks close Report Occurrence
-    7. System Closes Report Occurence
-    8. System Returns to previous page that Mentor clicked Report Occurrecne on
+1. The Mentor clicks a "Report Occurrence" button
+2. The system displays a form with the Occurrence Type, description, subject, date, and whether to submit the Occurrence anonymously
+3. The Mentor fills out the fields
+4. The Mentor clicks on a "Submit Button"
+5. The system displays a confirmation message
 
 # Alternative Flow of Events
 
-4a. Mentor Clicks close Report Occurrence
-    5a. System Prompts Mentor if they want to exit before saving
-6a. Mentor Clicks no
-    7a. System Return to Report menue
-
-4b. Mentor Clicks close Report Occurrence
-    5b. System Prompts Mentor if they want to exit before saving
-6b. Mentor Clicks yes
-    7b. System Closes Report Occurence
-    8a. System Returns to previous page that Mentor clicked Report Occurrecne on
-
-# Postconditions
-
--Mentor Loged in
+4a. The Mentor clicks a "Cancel" button
+5a. The system prompts the Mentor if they are sure they want to discard the Occurrence
+6a. The Mentor clicks a "Yes" button
+7a. The system discards the Occurrence and displays a confirmation message
+6b. The Mentor clicks a "No" button
+7b. The system returns the Mentor to the form

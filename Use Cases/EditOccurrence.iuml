@@ -1,9 +1,11 @@
 @startuml Edit Occurence
 rectangle "Occurrences"{
 (Edit Occurrence)
+(Review Occurrence)
 }
 actor :Admin:
 Admin -- (Edit Occurrence)
+(Edit Occurrence) .> (Review Occurrence) : <<extend>>
 @enduml
 
 # Participating Actors
@@ -11,31 +13,26 @@ Admin -- (Edit Occurrence)
 - Admin
 
 # Preconditions
-- Admin Loged in
+
+- The Admin is authenticated
+- This use case **extends** ReviewOccurrence, and is initiated when the Admin clicks an "Edit" button in the menu of an Occurrence
 
 # Flow of Events
 
-1. Admin Presses Edit Occurrence button
-    2. System opens Edit Occurence window and displayes all relevent information ie. type, mentors, notes ... 
-3. Admin makes changes to feilds in Occurence edit window.
-4. Admin Clicks save changes
-    5. System saves changes and logs changes in Points
-6. Admin Clicks close Edit Occurrence
-    7. System Closes Edit Occurence
-    8. System Returns to previous page that admin clicked Edit Occurrecne on
+1. The system displays a form for editing the Occurrence Type, Point value, and Action.
+2. The Admin makes changes to the Type, Point, or Action values
+3. The Admin clicks a "Save" button
+4. The system displays a confirmation message
+5. The Admin is returned to the menu for the Occurrence that was edited
 
 # Alternative Flow of Events
 
-4a. Admin Clicks close Edit Occurrence
-    5a. System Prompts Admin if they want to exit before saving
-6a. Admin Clicks no
-    7a. System Return to edit menue
-
-4b. Admin Clicks close Edit Occurrence
-    5b. System Prompts Admin if they want to exit before saving
-6b. Admin Clicks yes
-    7b. System Closes Edit Occurence
-    8a. System Returns to previous page that admin clicked Edit Occurrecne on
+4a. Admin Clicks a "Cancel" button
+    5a. The system promts the Admin to confirm discarding the changes
+6a. The Admin clicks a "Yes" button
+    7a. The system returns the Admin to the Occurrence menu
+6b. The Admin clicks a "No" button 
+    7a. the system returns the Admin to the form
 
 # Postconditions
 

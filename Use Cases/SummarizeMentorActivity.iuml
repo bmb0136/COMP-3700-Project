@@ -12,10 +12,10 @@ Admin -- summarize
 
 # Preconditions
 
-- admin is authenticated
+- The Admin is authenticated
 
 # Flow of Events
 
-1. admin clicks a "Summarize Mentor Activity" button
-2. system displays a summary of mentor activity
+1. The Admin opens the Admin Summary Screen
+2. The system displays a table of Mentor activities, including: profile changes (which they can approve/deny; see RequestSpecialProfileEdit), attendance points, behavior points, and total points.
 

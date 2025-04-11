@@ -13,7 +13,6 @@ Mentor -- Edit
 # Preconditions
 
 - Mentor is authenticated
-- This use case **extends** the RequestSpecialProfileEdit and is invoked when the Admin approves the Mentor's profile change
 
 # Flow of Events
 

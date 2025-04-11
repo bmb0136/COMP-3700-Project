@@ -17,18 +17,17 @@ Admin -- req
 
 # Preconditions
 
-- Mentor is authenticated
-- Admin is authenticated
+- The Mentor is authenticated
+- The Admin is authenticated
+- This use case **extends** EditProfile, and is initiated when the Mentor edits their preferred name or profile picture
 
 # Flow of Events
 
-1. Mentor requests a special profile edit
-2. Admin receives the request
-3. Admin approves the request
-4. system notifies the Mentor of the approval
+1. The Admin is notified of the request
+2. The Admin approves the request
+3. The system notifies the Mentor of the approval
 
 # Alternative Flow of Events
 
-
-3a. Admin rejects the request
-4a. system notifies the Mentor of the rejection
+2a. The Admin rejects the request
+3a. The system notifies the Mentor of the rejection
