@@ -16,19 +16,17 @@ Admin -- ConfDefActOcc
 
 # Flow of Events
 
-1. The admin clicks a "Configure Default Actions" button
-2. The system displays the avalable occurrence type and action to modify in a drop down box
-  3. The Admin choses a object to configure and changes action
-  4. if admin wants to modify another object return to 3
-5. The Admin saves and Closes Configure Default Actions
-  
+1. The Admin clicks a "Configure Default Actions" button
+2. The system displays a list of Occurrence Types and dropdowns to select Actions
+3. The Admin edits the drop downs
+4. The Admin clicks a "Save" button
+5. The system displays a confirmation message
 
 # Alternative Flow of Events
 
-5a. The Admin Closes Configure Default Actions
-  6a. The System promps if the Admin wants to exit without saving
-  7a. The admin says yes.
-8a. The System Closes Configure Default Actions
-
-7b. The admin says no
-8b. The System returns to 3
+4a. The Admin clicks a "Cancel" button
+5a. The system prompts the Admin if they are sure they want to discard the changes
+6a. The Admin clicks a "Yes" button
+7a. The system discards the changes and displays a confirmation message
+6b. The Admin clicks a "No" button
+7b. The system returns the Admin to the list
