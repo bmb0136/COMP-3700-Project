@@ -1,0 +1,39 @@
+@startuml CreateSession
+actor :Mentor:
+actor :Admin:
+
+rectangle "Sessions" {
+  (Create Session) as create
+}
+Admin -- create
+Mentor -- create
+@enduml
+
+/`
+# Participating Actors
+
+- Admin
+- Mentor
+
+# Preconditions
+
+- The Admin is authenticated
+- The Mentor is authenticated
+
+# Flow of Events
+
+1. Mentor requests to create a session
+2. Admin receives the request
+3. Admin approves the request
+4. system notifies the Mentor of the approval
+5. session opens to be started at the specified time
+
+# Alternative Flow of Events
+
+
+3a. Admin rejects the request
+4a. system notifies the Mentor of the rejection
+
+
+# Quality Requirements
+Button should be on the main page where all sessions are shown pending sessions should be displayed separately and if the user is an admin approve/denial should be next to it
