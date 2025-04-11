@@ -1,9 +1,9 @@
 @startuml Edit Occurence
 rectangle "Occurrences"{
-(Querry Occurrence)
+(Query Occurrence)
 }
 actor :Admin:
-Admin -- (Querry Occurrence)
+Admin -- (Query Occurrence)
 @enduml
 
 # Participating Actors
@@ -16,15 +16,15 @@ Admin -- (Querry Occurrence)
 
 # Flow of Events
 
-1. Admin Presses Querry Occurrence button
-    2. System opens Querry Occurence window and displayes list of Occurrences with details on status and infromation 
+1. Admin Presses Query Occurrence button
+    2. System opens Query Occurence window and displayes list of Occurrences with details on status and infromation 
     3. System includes displaying filtering options
 4. Admin sets filter options ie. pending, atendance, points, ...
 5. Admin Clicks apply filters
     6. System applyes and calcualtates filtes
 6. Admin Clicks close Query Occurrence
-    7. System Closes Querry Occurence
-    8. System Returns to previous page that admin clicked Querry Occurrecne on
+    7. System Closes Query Occurence
+    8. System Returns to previous page that admin clicked Query Occurrecne on
 
 # Postconditions
 
