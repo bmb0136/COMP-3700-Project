@@ -5,4 +5,5 @@ left to right direction
 !include ../MarkMentorTardy.iuml
 !include ../MarkMentorAbsent.iuml
 !include ../AssignSession.iuml
+!include ../CreateSession.iuml
 @enduml
