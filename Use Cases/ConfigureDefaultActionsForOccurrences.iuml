@@ -8,43 +8,27 @@ Admin -- ConfDefActOcc
 
 # Participating Actors
 
-- My Actor
-- My Other Actor
+- Admin
 
 # Preconditions
 
-> Optional
-
-- A
-- B
-- C
+- The Admin is authenticated
 
 # Flow of Events
 
-1. A
-2. B
-3. C
+1. The admin clicks a "Configure Default Actions" button
+2. The system displays the avalable occurrence type and action to modify in a drop down box
+  3. The Admin choses a object to configure and changes action
+  4. if admin wants to modify another object return to 3
+5. The Admin saves and Closes Configure Default Actions
+  
 
 # Alternative Flow of Events
 
-> Optional
+5a. The Admin Closes Configure Default Actions
+  6a. The System promps if the Admin wants to exit without saving
+  7a. The admin says yes.
+8a. The System Closes Configure Default Actions
 
-1a. U
-2a. V
-3a. W
-
-# Postconditions
-
-> Optional
-
-- D
-- E
-- F
-
-# Quality Requirements
-
-> Optional
-
-- 1
-- 2
-- 3
+7b. The admin says no
+8b. The System returns to 3
