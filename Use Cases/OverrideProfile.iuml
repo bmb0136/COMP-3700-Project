@@ -17,16 +17,21 @@ Admin -- OverProf
 
 # Flow of Events
 
-1. Admin Clicks a Mentors Profile
-2. Admin clicks Override Profile
-3. Admin Makes Changes to Mentors Profile
-4. Admin Saves Changes and Changes are written serverside
-5. Menu closed Mentor Profile Page refreshed and returned to with updated changes
+1. Then Admin views a Mentor's Profile
+2. Then Admin clicks an "Edit Profile" button
+3. The system displays a form for editing the Mentor's information
+4. Then Admin makes Changes to Mentor's Profile
+5. Then Admin clicks a "Save" button
+6. The system displays a confirmation message
 
 # Alternative Flow of Events
 
-4a. Admin Exits without saving local changes discarded
-5a. Menu Closed and returned to Mentor Profile
+5a. The Admin clicks a "Cancel" button
+6a. The system prompts the Admin if they are sure they want to discard the changes to the Mentor's Profile
+7a. The Admin clicks a "Yes" button
+8a. The system discards the changes and displays a confirmation message
+7b. The Admin clicks a "No" button
+8b. The system returns the Admin to the form
 
 # Quality Requirements
 

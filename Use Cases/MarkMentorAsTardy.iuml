@@ -1,5 +1,4 @@
 @startuml Mark Mentor as Tardy
-actor :Mentor:
 rectangle "Sessions" {
   (Start Session) as Start
   (Mark Mentor as Tardy) as Tardy
@@ -14,8 +13,8 @@ Tardy ..> Report : <<include>>
 
 # Preconditions
 
-- Session started when current time > TardinessInterval
+- This use case **extends** StartSession, and is initiated when the interval between the current time and the start time of the Session is greater than or equal to the minimum Tardiness Interval, but less than the maximum Tardiness Interval
 
 # Flow of Events
-1. Include ReportOccurence
-2. System reports that the mentor was tardy
+
+1. **include** ReportOccurrence

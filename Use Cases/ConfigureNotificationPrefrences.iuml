@@ -16,6 +16,6 @@ Mentor -- notifPref
 
 # Flow of Events
 
-1. Mentor selects the notifcations they want to receive/send
-2. Mentor clicks a "Save" button
-3. System saves the notification preferences
+1. The Mentor selects the Notifications they want to receive
+2. The Mentor clicks a "Save" button
+3. The system saves the notification preferences

@@ -6,6 +6,6 @@ left to right direction
 !include ../ReviewOccurrence.iuml
 !include ../ConfigureDefaultActionsForOccurrences.iuml
 !include ../EditOccurrence.iuml
-!include ../QuerryOccurrence.iuml
+!include ../QueryOccurrence.iuml
 !include ../ReportOccurrence.iuml
 @enduml

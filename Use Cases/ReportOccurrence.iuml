@@ -3,12 +3,12 @@ rectangle "Occurrences"{
 (Report Occurrence)
 }
 actor :Mentor:
-Mentor -- (Report Occurrence)
+Mentor "0..1" -- (Report Occurrence)
 @enduml
 
 # Participating Actors
 
-- Mentor
+- Mentor (unless the Occurrence is being reported automatically; e.g., by MarkMentorAsAbsent or MarkMentorAsTardy)
 
 # Preconditions
 
@@ -19,7 +19,7 @@ Mentor -- (Report Occurrence)
 1. The Mentor clicks a "Report Occurrence" button
 2. The system displays a form with the Occurrence Type, description, subject, date, and whether to submit the Occurrence anonymously
 3. The Mentor fills out the fields
-4. The Mentor clicks on a "Submit Button"
+4. The Mentor clicks on a "Submit" button
 5. The system displays a confirmation message
 
 # Alternative Flow of Events

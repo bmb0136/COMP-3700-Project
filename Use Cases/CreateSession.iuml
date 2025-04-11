@@ -21,18 +21,16 @@ Mentor -- create
 
 # Flow of Events
 
-1. Mentor requests to create a session
-2. Admin receives the request
-3. Admin approves the request
-4. system notifies the Mentor of the approval
-5. session opens to be started at the specified time
+1. The Mentor requests to create a session
+2. The Admin receives the request
+3. The Admin approves the request
+4. The system notifies the Mentor of the approval
 
 # Alternative Flow of Events
 
-
-3a. Admin rejects the request
-4a. system notifies the Mentor of the rejection
-
+3a. The Admin rejects the request
+4a. The system notifies the Mentor of the rejection
 
 # Quality Requirements
-Button should be on the main page where all sessions are shown pending sessions should be displayed separately and if the user is an admin approve/denial should be next to it
+
+- Button should be on the main page where all sessions are shown pending sessions should be displayed separately and if the user is an admin approve/denial should be next to it

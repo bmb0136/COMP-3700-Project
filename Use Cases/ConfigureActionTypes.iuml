@@ -11,23 +11,22 @@ Admin -- (Configure Action Types)
 - Admin
 
 # Preconditions
+
 - The Admin is authenticated
 
 # Flow of Events
 
-1. Admin Presses Configure Action Types
-    2.System displyes presently avalable Actions 
-    3.System diplays add Action type
-4. Admin Presses Configure action on a action
-    5. Sytem Displys curent options in editalbe fields
-6.Admin edits action and saves, system saves changes
+1. The Admin clicks a "Configure Action Types" button
+2. The system displays an edit list of Actions
+3. The Admin edits the Actions
+4. The Admin clicks a "Save" button
+5. The system displays a confirmation message
 
 # Alternative Flow of Events
 
-4a. Admin Presses Add action type
-    5a. Sytem Displys curent options in editalbe fields
-6a. Admin creates action and saves, system saves changes
-
-# Postconditions
-
--Admin Loged in
+4a. The Admin clicks a "Cancel" button
+5a. The system prompts the Admin if they are sure they want to discard the Actions
+6a. The Admin clicks a "Yes" button
+7a. The system discards the changes and displays a confirmation message
+6b. The Admin clicks a "No" button
+7b. The system returns the Admin to the list

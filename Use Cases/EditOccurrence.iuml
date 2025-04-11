@@ -28,12 +28,8 @@ Admin -- (Edit Occurrence)
 # Alternative Flow of Events
 
 4a. Admin Clicks a "Cancel" button
-    5a. The system promts the Admin to confirm discarding the changes
+    5a. The system prompts the Admin to confirm discarding the changes
 6a. The Admin clicks a "Yes" button
     7a. The system returns the Admin to the Occurrence menu
 6b. The Admin clicks a "No" button 
     7a. the system returns the Admin to the form
-
-# Postconditions
-
--Admin Loged in

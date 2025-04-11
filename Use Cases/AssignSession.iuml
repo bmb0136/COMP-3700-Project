@@ -14,14 +14,10 @@ Admin -- Assign
 # Preconditions
 
 - The Admin is authenticated
-- Session exists
 
 # Flow of Events
 
-1. Admin clicks edit on existing session
-2. admin assigns mentor to session
-3. mentor is notified of the change
-
-# Quality Requirements
-
-- Should notify the mentor when they get assigned to a session
+1. The Admin clicks edit on an "Assign Session" button
+2. The Admin selects a Mentor to assign
+3. The Admin clicks a "Save" button
+4. The Mentor is notified of the assignment

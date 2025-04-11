@@ -18,4 +18,4 @@ User -- LogOut
 
 1. The User clicks a "Log out" button
 2. The User confirms the log out action
-3. The User is logged out
+3. The system displays a confirmation message

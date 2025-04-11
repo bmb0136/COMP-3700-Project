@@ -23,4 +23,4 @@ User -- LogIn
 
 # Alternative Flow of Events
 
-4a. If the User's credentials are invalid, the system displays an error message, and the User remains unauthenticated.
+3a. If the User's credentials are invalid, the system displays an error message. Return to step 2.

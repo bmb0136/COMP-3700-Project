@@ -12,10 +12,11 @@ Mentor -- Edit
 
 # Preconditions
 
-- Mentor is authenticated
+- The Mentor is authenticated
 
 # Flow of Events
 
-1. mentor selects changes to be made to their profile
-2. mentor clicks a "Save" button
-3. system saves the changes to the profile
+1. The Mentor clicks an "Edit" button on their profile
+2. The Mentor edits their personal information
+3. The Mentor clicks a "Save" button
+4. The system displays a confirmation message

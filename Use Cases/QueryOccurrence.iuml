@@ -1,4 +1,4 @@
-@startuml Edit Occurence
+@startuml Edit Occurrence
 rectangle "Occurrences"{
 (Query Occurrence)
 }
@@ -16,16 +16,7 @@ Admin -- (Query Occurrence)
 
 # Flow of Events
 
-1. Admin Presses Query Occurrence button
-    2. System opens Query Occurence window and displayes list of Occurrences with details on status and infromation 
-    3. System includes displaying filtering options
-4. Admin sets filter options ie. pending, atendance, points, ...
-5. Admin Clicks apply filters
-    6. System applyes and calcualtates filtes
-6. Admin Clicks close Query Occurrence
-    7. System Closes Query Occurence
-    8. System Returns to previous page that admin clicked Query Occurrecne on
-
-# Postconditions
-
--Admin Loged in
+1. The Admin opens the Admin Summary Screen
+2. The system displays a list of Occurrences, with filters for Occurrence Type and Status
+3. The Admin changes the filters
+4. The system updates the list to reflect the new filters

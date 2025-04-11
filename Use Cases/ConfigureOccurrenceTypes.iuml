@@ -23,4 +23,4 @@ rectangle "Occurrences" {
 
 # Alternative Flow of Events
 
-1. If the Admin attempts to remove or disable all of the Ocurrence types in the list, the system will display an error message and reject the change.
+1. If the Admin attempts to remove or disable all of the Occurrence types in the list, the system will display an error message and reject the change.

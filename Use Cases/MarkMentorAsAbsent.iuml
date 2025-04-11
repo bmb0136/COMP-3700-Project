@@ -16,9 +16,9 @@ MarkAbsent ..> Report : <<include>>
 
 # Preconditions
 
-- Mentor has Not Started Session
-- Current Time greater than MaxTardinessInterval
+- The Mentor has Not Started Session
+- The interval between the current time and the start time of the Session is greater than or equal to the maximum Tardiness Interval
 
 # Flow of Events
-1. Include ReportOccurence
-2. System reports that the mentor is absent
+
+1. **include** ReportOccurrence
