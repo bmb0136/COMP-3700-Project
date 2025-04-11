@@ -2,8 +2,8 @@
 !include ../../style.iuml
 left to right direction
 !include ../StartSession.iuml
-!include ../MarkMentorTardy.iuml
-!include ../MarkMentorAbsent.iuml
+!include ../MarkMentorAsTardy.iuml
+!include ../MarkMentorAsAbsent.iuml
 !include ../AssignSession.iuml
 !include ../CreateSession.iuml
 @enduml

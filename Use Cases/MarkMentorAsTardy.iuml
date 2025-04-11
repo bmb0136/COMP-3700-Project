@@ -1,4 +1,4 @@
-@startuml MarkMentorTardy
+@startuml Mark Mentor as Tardy
 actor :Mentor:
 rectangle "Sessions" {
   (Start Session) as Start

@@ -1,4 +1,4 @@
-@startuml MarkMentorAbsent
+@startuml Mark Mentor as Absent
 actor :Absence Timer: as AbsenceTimer
 rectangle "Sessions" {
   (Mark Mentor as Absent) as MarkAbsent
