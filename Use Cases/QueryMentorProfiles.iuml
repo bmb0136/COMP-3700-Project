@@ -6,7 +6,7 @@ rectangle "Mentor Profiles" {
 Admin -- QueryProf
 @enduml
 
-/'
+
 # Participating Actors
 
 - Admin
@@ -22,4 +22,5 @@ Admin -- QueryProf
 
 
 # Quality Requirements
-Should quickly show all mentor profiles in a easy to read list with a drop down (think 3 dots next to name) menu to access what the admin is allowed to edit (override profile, summarize, etc)
+
+- Should quickly show all mentor profiles in a easy to read list with a drop down (think 3 dots next to name) menu to access what the admin is allowed to edit (override profile, summarize, etc)

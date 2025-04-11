@@ -8,6 +8,10 @@ User -- LogOut
 
 # Participating Actors
 
+- User
+
+# Preconditions
+
 - The User is authenticated
 
 # Flow of Events

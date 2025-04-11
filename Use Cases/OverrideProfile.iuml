@@ -6,7 +6,7 @@ rectangle "Mentor Profiles" {
 Admin -- OverProf
 @enduml
 
-/'
+
 # Participating Actors
 
 - Admin
@@ -25,10 +25,9 @@ Admin -- OverProf
 
 # Alternative Flow of Events
 
-
 4a. Admin Exits without saving local changes discarded
 5a. Menu Closed and returned to Mentor Profile
 
 # Quality Requirements
 
-Easy to edit interface, Ensure it is clear that this is not request changes and will write to the profile, shows changes after written
+- Easy to edit interface, Ensure it is clear that this is not request changes and will write to the profile, shows changes after written

@@ -11,7 +11,8 @@ Admin -- (Querry Occurrence)
 - Admin
 
 # Preconditions
-- Admin Loged in
+
+- The Admin is authenticated
 
 # Flow of Events
 
@@ -24,6 +25,7 @@ Admin -- (Querry Occurrence)
 6. Admin Clicks close Query Occurrence
     7. System Closes Querry Occurence
     8. System Returns to previous page that admin clicked Querry Occurrecne on
+
 # Postconditions
 
 -Admin Loged in

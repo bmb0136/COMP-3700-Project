@@ -7,7 +7,6 @@ rectangle "Sessions" {
 Admin -- Assign
 @enduml
 
-/`
 # Participating Actors
 
 - Admin
@@ -18,9 +17,11 @@ Admin -- Assign
 - Session exists
 
 # Flow of Events
+
 1. Admin clicks edit on existing session
 2. admin assigns mentor to session
 3. mentor is notified of the change
 
 # Quality Requirements
-Should notify the mentor when they get assigned to a session
+
+- Should notify the mentor when they get assigned to a session

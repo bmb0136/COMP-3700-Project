@@ -8,6 +8,10 @@ User -- LogIn
 
 # Participating Actors
 
+- User
+
+# Preconditions
+
 - The User is not authenticated
 
 # Flow of Events

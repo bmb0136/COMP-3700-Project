@@ -11,7 +11,7 @@ Admin -- (Configure Action Types)
 - Admin
 
 # Preconditions
-- Admin Loged in
+- The Admin is authenticated
 
 # Flow of Events
 

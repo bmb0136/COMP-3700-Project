@@ -12,9 +12,9 @@ Tardy ..> Report : <<include>>
 
 @enduml
 
-/'
-# EntryCondition
--Session started when current time > TardinessInterval
+# Preconditions
+
+- Session started when current time > TardinessInterval
 
 # Flow of Events
 1. Include ReportOccurence
