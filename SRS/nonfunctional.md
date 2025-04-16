@@ -31,6 +31,7 @@
 # scenarios
 
 ## scenario 1
+    - keep process fast and automate it
 
 ## scenario 2
 
