@@ -1,10 +1,13 @@
 # project description
 
 ## summary
-    -nothing
+    - nothing
+    - easy to read system
+    - mostly automated
 
 ## mentor profile management
-
+    - profile picture file size limit
+    
 ## penalty score management
 
 ## occurrence submission
