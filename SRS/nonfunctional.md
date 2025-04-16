@@ -9,11 +9,12 @@
 
 ## penalty score management
     - automatic actions should be taken
-    - time interval should be 1 min for tardiness
 ## occurrence submission
     - date for submission is M/D/YYYY
 ## admin summary screen
-
+    - sort occurrences by date desc, 
+    - filter out closed or open, and the type and the time range of occurance
+    - search occurrences
 ## notifications
 
 ## constraints
