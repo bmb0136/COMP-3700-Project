@@ -11,7 +11,7 @@
     - automatic actions should be taken
     - time interval should be 1 min for tardiness
 ## occurrence submission
-
+    - date for submission is M/D/YYYY
 ## admin summary screen
 
 ## notifications
