@@ -1,15 +1,15 @@
 # project description
 
 ## summary
-    - nothing
     - easy to read system
     - mostly automated
 
 ## mentor profile management
     - profile picture file size limit
-    
-## penalty score management
 
+## penalty score management
+    - automatic actions should be taken
+    - time interval should be 1 min for tardiness
 ## occurrence submission
 
 ## admin summary screen
