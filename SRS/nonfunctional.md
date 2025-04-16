@@ -16,7 +16,7 @@
     - filter out closed or open, and the type and the time range of occurance
     - search occurrences
 ## notifications
-
+    - add alert that appeares in the application
 ## constraints
 
 # scenarios
