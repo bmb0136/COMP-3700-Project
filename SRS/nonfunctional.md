@@ -37,6 +37,8 @@
     - nothing
     
 ## scenario 3
+    - have a formal submission method
+    - give immediate feedback
 
 ## scenario 4
 
