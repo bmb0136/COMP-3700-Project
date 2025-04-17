@@ -46,8 +46,5 @@
     - filter by occurrence type, pos or neg
     - have reports, profile chnages and penalty scores be on the dashboard.
     - intuitive
-    
+
 ## scenario 5
-
-# tasks
-
