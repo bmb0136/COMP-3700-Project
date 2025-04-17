@@ -1,51 +1,63 @@
-# project description
+# Project Description
 
-## summary
-    - easy to read system
-    - mostly automated
+## Summary
 
-## mentor profile management
-    - profile picture file size limit
+- Easy to read system
+- Mostly automated
 
-## penalty score management
-    - automatic actions should be taken
+## Mentor Profile Management
 
-## occurrence submission
-    - date for submission is M/D/YYYY
+- Profile picture file size limit
 
-## admin summary screen
-    - sort occurrences by date desc, 
-    - filter out closed or open, and the type and the time range of occurrence
-    - search occurrences
+## Penalty Score Management
 
-## notifications
-    - add alert that appears in the application
-    - sms and email options
+- Automatic actions should be taken
 
-## constraints
-    - easy to use
-    - respond quickly
-    - should be a web app
-    - be modular so future changes can be made
+## Occurrence Submission
 
-# scenarios
+- Date for submission is M/D/YYYY
 
-## scenario 1
-    - keep process fast and automate it
+## Admin Summary Screen
 
-## scenario 2
-    - nothing
+- Sort occurrences by date desc
+- Filter out closed or open, and the type and the time range of occurrence
+- Search occurrences
+
+## Notifications
+
+- Add alert that appears in the application
+- SMS and email options
+
+## Constraints
+
+- Easy to use
+- Respond quickly
+- Should be a web app
+- Be modular so future changes can be made
+
+# Scenarios
+
+## Scenario 1
+
+- Keep process fast and automate it
+
+## Scenario 2
+
+- Nothing
     
-## scenario 3
-    - have a formal submission method
-    - give immediate feedback
+## Scenario 3
 
-## scenario 4
-    - go to dashboard right after login
-    - fast system
-    - filter by occurrence type, pos or neg
-    - have reports, profile chnages and penalty scores be on the dashboard.
-    - intuitive
+- Have a formal submission method
+- Give immediate feedback
 
-## scenario 5
-    - user freindly
+## Scenario 4
+
+- Go to dashboard right after login
+- Fast system
+- Filter by occurrence type, pos or neg
+- Have reports, profile chnages and penalty scores be on the dashboard.
+- Intuitive
+
+## Scenario 5
+
+- User freindly
