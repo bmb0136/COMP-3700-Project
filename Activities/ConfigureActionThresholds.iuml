@@ -1,0 +1,15 @@
+@startuml Activity Template
+start
+if(Admin Authenticated?) then (yes)
+repeat :Edit Action Thresholds pressed;
+:Display list of Actions and point thresolds;
+:Save is pressed after editing;
+backward :Discard Local Changes;
+repeat while (Display: Save Changes?) is (Discard) not (Confirm)
+:Write Local Changes to System;
+stop
+else (no)
+#red:Display: "Authentication Failure please log in";
+end
+endif
+@enduml
