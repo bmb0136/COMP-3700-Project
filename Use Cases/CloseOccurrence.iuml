@@ -1,5 +1,5 @@
 @startuml Close Occurence
-rectangle "Occurrences"{
+package "Occurrences"{
 (Close Occurrence)
 (Review Occurrence)
 }

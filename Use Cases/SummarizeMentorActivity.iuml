@@ -1,6 +1,6 @@
 @startuml Summarize Mentor Activity
 actor :Admin:
-rectangle "Mentor Profiles" {
+package "Mentor Profiles" {
   (Summarize Mentor Activity) as summarize
 }
 Admin -- summarize

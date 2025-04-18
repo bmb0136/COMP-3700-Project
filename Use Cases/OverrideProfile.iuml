@@ -1,6 +1,6 @@
 @startuml OverrideProfile
 actor :Admin:
-rectangle "Mentor Profiles" {
+package "Mentor Profiles" {
   (Override Profile) as OverProf
 }
 Admin -- OverProf

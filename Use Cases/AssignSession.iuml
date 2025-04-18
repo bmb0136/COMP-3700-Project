@@ -1,7 +1,7 @@
 @startuml CreateSession
 actor :Admin:
 
-rectangle "Sessions" {
+package "Sessions" {
   (Assign Session) as Assign
 }
 Admin -- Assign

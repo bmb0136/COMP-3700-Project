@@ -1,6 +1,6 @@
 @startuml Configure Action Thresholds
 actor :Admin:
-rectangle "Penalty Score Management" {
+package "Penalty Score Management" {
   (Configure Action Thresholds) as ConfActThr
 }
 Admin -- ConfActThr

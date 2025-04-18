@@ -1,6 +1,6 @@
 @startuml StartSession
 actor :Mentor:
-rectangle "Sessions" {
+package "Sessions" {
   (Start Session) as Start
 }
 Mentor -- Start

@@ -1,6 +1,6 @@
 @startuml Log In
 actor :User: <<abstract>>
-rectangle "Authentication" {
+package "Authentication" {
   (Log In) as LogIn
 }
 User -- LogIn

@@ -1,6 +1,6 @@
 @startuml Update Mentor Point Total
 actor :Admin:
-rectangle "Penalty Score Management" {
+package "Penalty Score Management" {
   (Update Mentor Point Total) as UpdMtrPts
 }
 Admin -- UpdMtrPts

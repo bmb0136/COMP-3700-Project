@@ -1,6 +1,6 @@
 @startuml My Use Case
 actor :Admin:
-rectangle "Occurrences" {
+package "Occurrences" {
   (Configure Default Actions\nfor Occurrences) as ConfDefActOcc
 }
 Admin -- ConfDefActOcc

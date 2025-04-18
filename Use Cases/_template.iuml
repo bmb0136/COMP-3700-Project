@@ -1,6 +1,6 @@
 @startuml My Use Case
 actor :MyActor:
-rectangle "Some Group" {
+package "Some Group" {
   (My Use Case) as MyUse
 }
 MyActor -- MyUse

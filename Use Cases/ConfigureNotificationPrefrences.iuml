@@ -1,6 +1,6 @@
 @startuml Configure Notification Preferences
 actor :Mentor:
-rectangle "Notifications" {
+package "Notifications" {
   (Configure Notification Preferences) as notifPref
 }
 Mentor -- notifPref

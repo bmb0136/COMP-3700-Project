@@ -1,9 +1,9 @@
 @startuml Mark Mentor as Absent
 actor :Absence Timer: as AbsenceTimer
-rectangle "Sessions" {
+package "Sessions" {
   (Mark Mentor as Absent) as MarkAbsent
 }
-rectangle "Occurrences" {
+package "Occurrences" {
   (Report Occurrence) as Report
 }
 AbsenceTimer -- MarkAbsent

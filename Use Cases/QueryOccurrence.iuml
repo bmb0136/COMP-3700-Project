@@ -1,5 +1,5 @@
 @startuml Edit Occurrence
-rectangle "Occurrences"{
+package "Occurrences"{
 (Query Occurrence)
 }
 actor :Admin:

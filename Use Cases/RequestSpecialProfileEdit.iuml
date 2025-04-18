@@ -1,7 +1,7 @@
 @startuml Request Special Profile Edit
 actor :Mentor:
 actor :Admin:
-rectangle "Mentor Profiles" {
+package "Mentor Profiles" {
   (Request Special Profile Edit) as req
   (Edit Profile) as Edit
   req .> Edit : <<extends>>

@@ -2,7 +2,7 @@
 actor :Mentor:
 actor :Admin:
 
-rectangle "Sessions" {
+package "Sessions" {
   (Create Session) as create
 }
 Admin -- create

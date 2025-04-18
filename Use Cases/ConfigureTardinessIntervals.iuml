@@ -1,6 +1,6 @@
 @startuml Configure Tardiness Intervals
 actor :Admin:
-rectangle "Penalty Score Management" {
+package "Penalty Score Management" {
   (Configure Tardiness Intervals) as ConfTardInt
 }
 Admin -- ConfTardInt

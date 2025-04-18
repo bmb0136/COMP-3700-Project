@@ -1,6 +1,6 @@
 @startuml Configure Default Point Values
 actor :Admin:
-rectangle "Penalty Score Management" {
+package "Penalty Score Management" {
   (Configure Default Point Values) as ConfDefPts
 }
 Admin -- ConfDefPts

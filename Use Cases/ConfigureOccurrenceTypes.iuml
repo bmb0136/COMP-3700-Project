@@ -1,6 +1,6 @@
 @startuml Configure Occurrence Types
 actor :Admin:
-rectangle "Occurrences" {
+package "Occurrences" {
   Admin -- (Configure Occurrence Types)
 }
 @enduml

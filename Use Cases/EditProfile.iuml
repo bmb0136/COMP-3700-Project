@@ -1,6 +1,6 @@
 @startuml Edit Profile
 actor :Mentor:
-rectangle "Mentor Profiles" {
+package "Mentor Profiles" {
   (Edit Profile) as Edit
 }
 Mentor -- Edit
