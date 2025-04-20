@@ -1,4 +1,4 @@
-@startuml Edit Occurence
+@startuml Edit Occurrence
 package "Occurrences"{
 (Edit Occurrence)
 (Review Occurrence)

@@ -1,4 +1,4 @@
-@startuml Review Occurence
+@startuml Review Occurrence
 package "Occurrences"{
 (Review Occurrence)
 }
