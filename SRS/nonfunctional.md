@@ -55,9 +55,9 @@
 - Go to dashboard right after login
 - Fast system
 - Filter by occurrence type, pos or neg
-- Have reports, profile chnages and penalty scores be on the dashboard.
+- Have reports, profile changes and penalty scores be on the dashboard.
 - Intuitive
 
 ## Scenario 5
 
-- User freindly
+- User friendly
