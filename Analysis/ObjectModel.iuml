@@ -1,0 +1,3 @@
+@startuml Tigers4Tigers Object Model
+!include ../style.iuml
+@enduml
