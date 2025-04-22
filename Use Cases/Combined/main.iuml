@@ -5,4 +5,5 @@
 !include Occurrences.iuml
 !include Sessions.iuml
 !include PenaltyScoreManagement.iuml
+note bottom of Mentor : Multiplicity belongs to\nassociation with Report\nOccurrence
 @enduml
