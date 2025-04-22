@@ -3,11 +3,9 @@ package "Sessions" {
   (Start Session) as Start
   (Mark Mentor as Tardy) as Tardy
 }
-package "Occurrences" {
-  (Report Occurrence) as Report
-}
+!include ReportOccurrence.iuml
 Tardy .> Start : <<extend>>
-Tardy ..> Report : <<include>>
+Tardy ..> (Report Occurrence) : <<include>>
 
 @enduml
 

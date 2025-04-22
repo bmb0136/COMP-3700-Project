@@ -3,11 +3,9 @@ actor :Absence Timer: as AbsenceTimer
 package "Sessions" {
   (Mark Mentor as Absent) as MarkAbsent
 }
-package "Occurrences" {
-  (Report Occurrence) as Report
-}
+!include ReportOccurrence.iuml
 AbsenceTimer -- MarkAbsent
-MarkAbsent ..> Report : <<include>>
+MarkAbsent ..> (Report Occurrence) : <<include>>
 @enduml
 
 # Participating Actors
