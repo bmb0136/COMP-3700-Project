@@ -3,7 +3,7 @@ actor :User: <<abstract>>
 package "Authentication" {
   (Log Out) as LogOut
 }
-User -- LogOut
+User -up- LogOut
 @enduml
 
 # Participating Actors

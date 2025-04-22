@@ -3,7 +3,7 @@ actor :Admin:
 package "Penalty Score Management" {
   (Configure Default Point Values) as ConfDefPts
 }
-Admin -- ConfDefPts
+Admin -up- ConfDefPts
 @enduml
 
 # Participating Actors

@@ -6,8 +6,8 @@ package "Mentor Profiles" {
   (Edit Profile) as Edit
   req .> Edit : <<extends>>
 }
-Mentor -- req
-Admin -- req
+Mentor -up- req
+Admin -up-- req
 @enduml
 
 # Participating Actors

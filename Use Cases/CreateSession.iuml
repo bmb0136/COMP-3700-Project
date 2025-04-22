@@ -5,7 +5,7 @@ actor :Admin:
 package "Sessions" {
   (Create Session) as create
 }
-Admin -- create
+Admin - create
 Mentor -- create
 @enduml
 

@@ -5,6 +5,6 @@ left to right direction
 !include ../LogOut.iuml
 actor :Mentor:
 actor :Admin:
-Mentor --|> User
-Admin --|> User
+Mentor -up-|> User
+Admin -up-|> User
 @enduml

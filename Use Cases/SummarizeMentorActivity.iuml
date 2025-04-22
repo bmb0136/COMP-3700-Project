@@ -3,7 +3,7 @@ actor :Admin:
 package "Mentor Profiles" {
   (Summarize Mentor Activity) as summarize
 }
-Admin -- summarize
+Admin -up- summarize
 @enduml
 
 # Participating Actors

@@ -3,7 +3,7 @@ actor :Admin:
 package "Penalty Score Management" {
   (Update Mentor Point Total) as UpdMtrPts
 }
-Admin -- UpdMtrPts
+Admin -up- UpdMtrPts
 @enduml
 
 # Participating Actors

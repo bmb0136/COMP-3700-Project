@@ -3,7 +3,7 @@ actor :Admin:
 package "Penalty Score Management" {
   (Configure Tardiness Intervals) as ConfTardInt
 }
-Admin -- ConfTardInt
+Admin -up- ConfTardInt
 @enduml
 
 # Participating Actors

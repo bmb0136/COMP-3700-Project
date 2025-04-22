@@ -3,7 +3,7 @@ actor :Mentor:
 package "Notifications" {
   (Configure Notification Preferences) as notifPref
 }
-Mentor -- notifPref
+Mentor -right- notifPref
 @enduml
 
 # Participating Actors

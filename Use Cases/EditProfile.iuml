@@ -3,7 +3,7 @@ actor :Mentor:
 package "Mentor Profiles" {
   (Edit Profile) as Edit
 }
-Mentor -- Edit
+Mentor -up- Edit
 @enduml
 
 # Participating Actors

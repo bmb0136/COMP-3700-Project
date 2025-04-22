@@ -3,7 +3,7 @@ package "Penalty Score Management"{
 (Configure Action Types)
 }
 actor :Admin:
-Admin -- (Configure Action Types)
+Admin -up- (Configure Action Types)
 @enduml
 
 # Participating Actors

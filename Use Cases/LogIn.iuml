@@ -3,7 +3,7 @@ actor :User: <<abstract>>
 package "Authentication" {
   (Log In) as LogIn
 }
-User -- LogIn
+User -up- LogIn
 @enduml
 
 # Participating Actors

@@ -3,7 +3,7 @@ actor :Admin:
 package "Mentor Profiles" {
   (Override Profile) as OverProf
 }
-Admin -- OverProf
+Admin -up- OverProf
 @enduml
 
 
