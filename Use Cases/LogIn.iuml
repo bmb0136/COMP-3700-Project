@@ -24,3 +24,18 @@ User -up- LogIn
 # Alternative Flow of Events
 
 3a. If the User's credentials are invalid, the system displays an error message. Return to step 2.
+
+@startuml Log In Object Model
+class LogIn <<control>> {}
+class LogInForm <<boundary>> {}
+class Credentials <<entity>> {
+  + username: String
+  + passwordHash: Byte[1024]
+}
+interface IPasswordHasher <<interface>> {
+  + hash(String password): Byte[1024]
+}
+LogIn --> LogInForm : Creates >
+LogIn --> Credentials : Checks >
+LogIn --> "- hasher" IPasswordHasher : Uses >
+@enduml
