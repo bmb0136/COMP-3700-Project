@@ -1,6 +1,5 @@
 @startuml Tigers4Tigers Object Model
 !include ../style.iuml
-!include ../Use Cases/_template.iuml!1
 !include ../Use Cases/AssignSession.iuml!1
 !include ../Use Cases/CloseOccurrence.iuml!1
 !include ../Use Cases/ConfigureActionThresholds.iuml!1
