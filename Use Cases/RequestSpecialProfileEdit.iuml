@@ -4,7 +4,7 @@ actor :Admin:
 package "Mentor Profiles" {
   (Request Special Profile Edit) as req
   (Edit Profile) as Edit
-  req .> Edit : <<extends>>
+  req .> Edit : <<extend>>
 }
 Mentor -up- req
 Admin -up-- req
