@@ -32,10 +32,12 @@ class Credentials <<entity>> {
   + username: String
   + passwordHash: Byte[1024]
 }
+class AuthenticationStateManager <<control>> {}
 interface IPasswordHasher <<interface>> {
   + hash(String password): Byte[1024]
 }
-LogIn --> "+ form" LogInForm : Creates >
+LogIn --> "+ form" LogInForm
 LogIn --> Credentials : Checks >
 LogIn --> "- hasher" IPasswordHasher : Uses >
+LogIn --> AuthenticationStateManager
 @enduml
