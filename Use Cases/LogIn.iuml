@@ -32,9 +32,11 @@ class Credentials <<entity>> {
   + username: String
   + passwordHash: Byte[1024]
 }
-class AuthenticationStateManager <<control>> {}
+class AuthenticationStateManager <<control>> {
+  + setAuthenticated(user: User, authenticated: Boolean)
+}
 interface IPasswordHasher <<interface>> {
-  + hash(String password): Byte[1024]
+  + hash(password: String): Byte[1024]
 }
 LogIn --> "+ form" LogInForm
 LogIn --> Credentials : Checks >
