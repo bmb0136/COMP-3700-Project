@@ -1,35 +1,35 @@
-@startuml CreateSession
-' define swim lanes (optional)
+@startuml
 |S1| Mentor
 |S2| Admin
+|S3| Unathenticated
 
-|S1|
 start
-if(Mentor Authenticated) then ([true])
+|S1|
+fork
+if(Mentor Authenticated) then ([False])
+#red:Display: "Authentication Failure please log in";
+end
+else([True])
 :Button Clicked: Create Session;
-:Mentor Fills out the form for create a session and presses submit;
+:Mentor Creates Session;
+:Await Admin Approval;
+endif
 
 
 |S2|
-if(Admin Authenticated) then ([true])
-:Admin Recieves Notification: Course Request;
-if (Admin Reviews Request) then (Approve)
-:Session Created in system;
-stop
-else(Deny)
-endif
-else ([false])
+fork again
+if(Admin Authenticated) then ([False])
 #red:Display: "Authentication Failure please log in";
 end
+else([True])
 endif
-
-
+end fork
+:Session Awaits Approval;
+if (Admin Reviews Rquest) then (Request Approved)
+#Green :Session Created in System;
+stop
+else (Request Denied)
 |S1|
-:Mentor Notified of Session being Rejected;
+#yellow :Mentor Notified of Rejection;
 stop
-else ([false])
-#red:Display: "Authentication Failure please log in";
-end
-
-
 @enduml
