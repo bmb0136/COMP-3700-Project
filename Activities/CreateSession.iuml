@@ -1,4 +1,4 @@
-@startuml
+@startuml CreateSession
 |S1| Mentor
 |S2| Admin
 |S3| Unathenticated
