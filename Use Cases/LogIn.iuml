@@ -35,7 +35,7 @@ class Credentials <<entity>> {
 interface IPasswordHasher <<interface>> {
   + hash(String password): Byte[1024]
 }
-LogIn --> LogInForm : Creates >
+LogIn --> "+ form" LogInForm : Creates >
 LogIn --> Credentials : Checks >
 LogIn --> "- hasher" IPasswordHasher : Uses >
 @enduml
