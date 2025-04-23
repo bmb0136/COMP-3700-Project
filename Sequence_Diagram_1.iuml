@@ -1,0 +1,41 @@
+@startuml
+actor Mentor
+participant "Start Session" as start
+participant "Mark Mentor as Tardy" as tardy
+participant "Report Occurrence" as report
+'participant "Mark Mentor as Absent" as absent
+'actor "Absence Timer" as timer
+
+'alt Mentor Starts
+
+    Mentor -> start: Start()
+    start -> start: t = startTime()
+    start -> start: delT = (t - session start time)
+    
+    opt delT > 0
+        start -> tardy: send mentor and delT
+        tardy -> tardy: determine interval
+        
+        /'loop number of intervals
+            opt low current interval <= delT <= high current interval
+            tardy -> tardy: interval is valid
+            
+            end
+        end'/
+        opt interval is valid
+            tardy -> tardy: create report
+            tardy -> report: send report data
+            report -> report: submit Report
+            report --> tardy 
+        end
+        tardy --> start
+    end
+    
+/'else Absence Timer activates  
+    
+    timer -> absent: end of sesson occurres
+    absent -> report: send report data
+    report -> report: submit Report to Admin
+end'/
+    start --> Mentor
+@enduml

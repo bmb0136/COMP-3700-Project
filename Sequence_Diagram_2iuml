@@ -1,0 +1,14 @@
+@startuml
+actor Mentor as m
+participant "Report Occurrence" as r
+m -> r: reportButton() 
+r->r: create report
+r-> m: display report window
+loop number of edits that Mentor does
+    m -> r: mentor edits feild in report
+    r --> m:
+end
+m->r:submit report
+r->r: submit report
+r --> m: displays confromation
+@enduml
