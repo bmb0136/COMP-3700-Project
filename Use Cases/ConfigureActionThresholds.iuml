@@ -21,3 +21,15 @@ Admin -up- ConfActThr
 3. The Admin edits the thresholds
 4. The Admin clicks a "Save" button
 5. The system displays a confirmation message
+
+@startuml Configure Action Thresholds Object Model
+class ConfigureActionThresholds <<control>> {}
+class ActionThresholdsForm <<boundary>> {}
+ConfigureActionThresholds --> ActionThresholdsForm
+class Action <<entity>> {}
+class ActionThreshold <<entity>> {
+  + points: Integer
+}
+ActionThreshold --> "+ action" Action
+ActionThresholdsForm "1" o-- "*" ActionThreshold
+@enduml
