@@ -32,7 +32,7 @@ class Credentials <<entity>> {
   + username: String
   + passwordHash: Byte[1024]
 }
-class AuthenticationStateManager <<control>> {
+class IAuthenticationStateManager <<interface>> {
   + setAuthenticated(user: User, authenticated: Boolean)
 }
 interface IPasswordHasher <<interface>> {
