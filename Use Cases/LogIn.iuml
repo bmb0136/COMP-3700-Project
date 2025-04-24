@@ -27,7 +27,10 @@ User -up- LogIn
 
 @startuml Log In Object Model
 class LogIn <<control>> {}
-class LogInForm <<boundary>> {}
+class LogInForm <<boundary>> {
+  + username: String
+  + password: String
+}
 class Credentials <<entity>> {
   + username: String
   + passwordHash: Byte[1024]
@@ -42,6 +45,6 @@ interface IPasswordHasher <<interface>> {
 }
 LogIn --> "+ form" LogInForm
 LogIn --> Credentials : Checks >
-LogIn --> "- hasher" IPasswordHasher : Uses >
+LogIn -> "- hasher" IPasswordHasher : Uses >
 LogIn --> IAuthenticationStateManager
 @enduml
