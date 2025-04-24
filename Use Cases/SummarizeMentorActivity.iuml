@@ -19,3 +19,14 @@ Admin -up- summarize
 1. The Admin opens the Admin Summary Screen
 2. The system displays a table of Mentor activities, including: profile changes (which they can approve/deny; see RequestSpecialProfileEdit), attendance points, behavior points, and total points.
 
+@startuml
+class SummariseMentorActivity <<control>>
+class MentorActivityFome <<boundry>> {
+  + Mentors: mentor[]
+}
+interface MentorActivity <<interface>> {
+  + aproveDenyProfileChanges(aproval: Bolean)
+
+}
+SummariseMentorActivity
+@enduml

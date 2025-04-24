@@ -21,3 +21,15 @@ Admin -up- UpdMtrPts
 3. The Admin edits the Point value
 4. The Admin clicks a "Save" button
 5. The system displays a confirmation message
+
+@startuml
+class UpdateMentorPointTotal <<control>>
+class MentorPointManager <<interface>> {
+  + modifyMentorPoints(mentor: Mentor, points: float)
+}
+class updateMentorPointsForm <<boundry>> {
+  + modifiedPoints: float
+}
+UpdateMentorPointTotal --> "+ form" updateMentorPointsForm: Checks > 
+UpdateMentorPointTotal --> MentorPointManager
+@enduml
