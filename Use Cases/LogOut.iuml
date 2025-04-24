@@ -19,3 +19,12 @@ User -up- LogOut
 1. The User clicks a "Log out" button
 2. The User confirms the log out action
 3. The system displays a confirmation message
+
+
+@startuml Log Out Object Model
+class IAuthenticationStateManager <<interface>> {}
+class LogOut <<control>> {}
+class LogOutButton <<boundary>> {}
+LogOut --> LogOutButton 
+LogOut --> IAuthenticationStateManager
+@enduml

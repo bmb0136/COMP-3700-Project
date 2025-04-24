@@ -34,3 +34,15 @@ Mentor -- create
 # Quality Requirements
 
 - Button should be on the main page where all sessions are shown pending sessions should be displayed separately and if the user is an admin approve/denial should be next to it
+
+@startuml Create Session Object Model
+class CreateSession <<control>>
+class CreateSessionForm <<boundary>>
+class Mentor <<entity>> {}
+class Session <<entity>> {
+  + startTime: DateTimeOffset
+}
+CreateSession --> "+ form" CreateSessionForm
+CreateSession --> Session
+Session --> "+ mentor" Mentor
+@enduml

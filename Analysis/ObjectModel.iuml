@@ -24,4 +24,10 @@
 !include ../Use Cases/StartSession.iuml!1
 !include ../Use Cases/SummarizeMentorActivity.iuml!1
 !include ../Use Cases/UpdateMentorPointTotal.iuml!1
+
+abstract class User <<abstract>> {}
+class Admin {}
+class Mentor {}
+Mentor --|> User
+Admin --|> User
 @enduml
