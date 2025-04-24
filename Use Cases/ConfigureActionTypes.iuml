@@ -39,4 +39,5 @@ class ActionType <<entity>> {
   + name: String
 }
 ActionTypeList "1" o-- "*" ActionType
+Action --> "+ type" ActionType
 @enduml
