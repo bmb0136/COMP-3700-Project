@@ -32,4 +32,5 @@ class Session <<entity>>{
   + session: Session
 }
 StartSession --> "+ Button" StartSessionButton: Activates <
+StartSession --> Session
 @enduml
