@@ -30,3 +30,23 @@ Mentor "0..1" -- (Report Occurrence)
 7a. The system discards the Occurrence and displays a confirmation message
 6b. The Mentor clicks a "No" button
 7b. The system returns the Mentor to the form
+
+@startuml Report Occurrence Object Model
+class ReportOccurrence <<control>> {}
+class ReportOccurrenceForm <<boundary>> {
+  + subject: String
+  + description: String
+  + date: DateOnly
+  + isAnonymous: Boolean
+}
+class Occurrence <<entity>> {
+  + subject: String
+  + description: String
+  + date: DateOnly
+  + isAnonymous: Boolean
+}
+ReportOccurrence --> ReportOccurrenceForm
+ReportOccurrence --> Occurrence : Creates >
+Occurrence --> "+ type" OccurrenceType
+Occurrence --> "+ document" Mentor
+@enduml
