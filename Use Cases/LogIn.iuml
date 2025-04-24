@@ -33,7 +33,9 @@ class Credentials <<entity>> {
   + passwordHash: Byte[1024]
 }
 class IAuthenticationStateManager <<interface>> {
-  + setAuthenticated(user: User, authenticated: Boolean)
+  + beginSession(user: User): String
+  + endSession(token: String)
+  + checkSession(token: String): Boolean
 }
 interface IPasswordHasher <<interface>> {
   + hash(password: String): Byte[1024]
