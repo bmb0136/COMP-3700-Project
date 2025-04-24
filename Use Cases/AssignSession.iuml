@@ -21,19 +21,3 @@ Admin -- Assign
 2. The Admin selects a Mentor to assign
 3. The Admin clicks a "Save" button
 4. The Mentor is notified of the assignment
-
-@startuml
-class CreateSession <<control>>
-class SessionForm <<boundry>>
-class Session <<entity>> {
-  + sessionName: String 
-  + assignedMentor: String
-  + startTime: DateTime
-}
-class CreateSessionManager <<control>>{
-  + addCreatedSession(session: Session)
-}
-CreateSession --> "+ form" SessionForm
-CreateSession --> Session : Uses >
-CreateSession --> CreateSessionManager
-@enduml

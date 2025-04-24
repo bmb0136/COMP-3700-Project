@@ -35,22 +35,14 @@ Mentor -- create
 
 - Button should be on the main page where all sessions are shown pending sessions should be displayed separately and if the user is an admin approve/denial should be next to it
 
-@startuml
+@startuml Create Session Object Model
 class CreateSession <<control>>
-class SessionForm <<boundry>>
+class CreateSessionForm <<boundary>>
+class Mentor <<entity>> {}
 class Session <<entity>> {
-  + sessionName: String 
-  + assignedMentor: String
-  + startTime: DateTime
+  + startTime: DateTimeOffset
 }
-class CreateSessionManager <<control>>{
-  + addCreatedSession(session: Session)
-}
-interface notification <<interface>> {
-  + sendNotification(message: String)
-}
-CreateSession --> "+ form" SessionForm
-CreateSession --> Session : Uses >
-CreateSession --> CreateSessionManager
-CreateSession --> notifications : Uses >
+CreateSession --> "+ form" CreateSessionForm
+CreateSession --> Session
+Session --> "+ mentor" Mentor
 @enduml
