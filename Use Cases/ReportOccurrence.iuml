@@ -48,5 +48,5 @@ class Occurrence <<entity>> {
 ReportOccurrence --> ReportOccurrenceForm
 ReportOccurrence --> Occurrence : Creates >
 Occurrence --> "+ type" OccurrenceType
-Occurrence --> "+ document" Mentor
+Occurrence --> Mentor
 @enduml
