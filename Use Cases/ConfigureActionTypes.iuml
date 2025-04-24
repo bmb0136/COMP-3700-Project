@@ -30,3 +30,13 @@ Admin -up- (Configure Action Types)
 7a. The system discards the changes and displays a confirmation message
 6b. The Admin clicks a "No" button
 7b. The system returns the Admin to the list
+
+@startuml Configure Action Types Object Model
+class ConfigureActionTypes <<control>> {}
+class ActionTypeList <<entity>> {}
+ConfigureActionTypes --> ActionTypeList
+class ActionType <<entity>> {
+  + name: String
+}
+ActionTypeList "1" o-- "*" ActionType
+@enduml
