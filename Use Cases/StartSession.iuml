@@ -24,3 +24,12 @@ Mentor -- Start
 # Quality Requirements
 
 - The system should display both when the Session needs to be started and when the Mentor is considered tardy/absent
+
+@startuml StartSession Object
+class StartSession <<control>>
+class StartSessionButton <<boundry>>
+class Session <<entity>>{
+  + session: Session
+}
+StartSession --> "+ Button" StartSessionButton: Activates <
+@enduml
