@@ -32,7 +32,7 @@ class Credentials <<entity>> {
   + username: String
   + passwordHash: Byte[1024]
 }
-class IAuthenticationStateManager <<interface>> {
+interface IAuthenticationStateManager <<interface>> {
   + beginSession(user: User): String
   + endSession(token: String)
   + checkSession(token: String): Boolean
