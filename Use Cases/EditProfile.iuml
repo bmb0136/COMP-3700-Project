@@ -55,6 +55,6 @@ EditProfileForm "1" o-- "1" ProfilePicture
 ProfileSettings "1" o-- "1" ProfilePicture
 ProfileSettings "1" o-- "1...*"Subject
 EditProfileForm  "1" o-- "1...*"Subject
-
+EditProfile --> RequestSpecialProfileEdit: May Invoke
 @enduml
 
