@@ -16,3 +16,9 @@ Tardy ..> (Report Occurrence) : <<include>>
 # Flow of Events
 
 1. **include** ReportOccurrence
+
+@startuml Mark Mentor as Tardy Object Model
+class MarkMentorAsTardy <<control>> {}
+MarkMentorAsTardy --> Occurrence : Reports >
+StartSession --> MarkMentorAsTardy : May Invoke >
+@enduml
