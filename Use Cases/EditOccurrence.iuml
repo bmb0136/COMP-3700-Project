@@ -33,3 +33,27 @@ Admin -- (Edit Occurrence)
     7a. The system returns the Admin to the Occurrence menu
 6b. The Admin clicks a "No" button 
     7a. the system returns the Admin to the form
+
+@startuml Edit Occurrence Object Model
+
+class EditOccurrence <<control>> {}
+
+class EditOccurrenceForm <<Boundary>>
+{
++points: integer
++subject: String
++description: String
++isAnonymous: Boolean
+}
+class Occurrence <<Entity>>
+{
++points: integer
+}
+
+EditOccurrence --> EditOccurrenceForm : Creates >
+EditOccurrenceForm --> OccurrenceType
+EditOccurrenceForm --> Action
+
+EditOccurrence --> Occurrence : Edits >
+
+@enduml
