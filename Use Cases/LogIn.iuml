@@ -41,5 +41,5 @@ interface IPasswordHasher <<interface>> {
 LogIn --> "+ form" LogInForm
 LogIn --> Credentials : Checks >
 LogIn --> "- hasher" IPasswordHasher : Uses >
-LogIn --> AuthenticationStateManager
+LogIn --> IAuthenticationStateManager
 @enduml
