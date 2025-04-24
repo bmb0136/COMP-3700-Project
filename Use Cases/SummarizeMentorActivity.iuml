@@ -21,12 +21,13 @@ Admin -up- summarize
 
 @startuml Summarize Mentor Activity object
 class SummariseMentorActivity <<control>>
-class MentorActivityFome <<boundry>> {
+class MentorActivityForm <<boundry>> {
   + Mentors: mentor[]
 }
 interface MentorActivity <<interface>> {
   + aproveDenyProfileChanges(aproval: Bolean)
 
 }
-SummariseMentorActivity
+SummariseMentorActivity --> MentorActivityForm
+SummariseMentorActivity --> MentorActivity
 @enduml
