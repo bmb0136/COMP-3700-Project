@@ -35,6 +35,8 @@ class Credentials <<entity>> {
   + username: String
   + passwordHash: Byte[1024]
 }
+abstract class User <<abstract>> {}
+User --> "+ credentials" Credentials
 interface IAuthenticationStateManager <<interface>> {
   + beginSession(user: User): String
   + endSession(token: String)
