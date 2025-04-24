@@ -40,4 +40,10 @@ class SpecialProfileEditApprovalButton
 approved: boolean
 }
 RequestSpecialProfileEdit --> SpecialProfileEditApprovalButton: creates
+RequestSpecialProfileEdit --> ProfileChangeRequest: Creates >
+class ProfileChangeRequest <<entity>> {
+  + newPreferredName: String
+  + newProfilePicture: File
+}
+ProfileChangeRequest --> "+ mentor" Mentor
 @enduml
