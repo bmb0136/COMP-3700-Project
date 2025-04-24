@@ -22,7 +22,7 @@ Admin -up- UpdMtrPts
 4. The Admin clicks a "Save" button
 5. The system displays a confirmation message
 
-@startuml
+@startuml Update Mentor Point Total object
 class UpdateMentorPointTotal <<control>>
 class MentorPointManager <<interface>> {
   + modifyMentorPoints(mentor: Mentor, points: float)
