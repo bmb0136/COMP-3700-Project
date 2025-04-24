@@ -1,0 +1,16 @@
+@startuml ConfigureActionTypes
+start
+if(Admin Authenticated) then ([True])
+:Button Clicked: "Configure ActionTypes";
+repeat :Display: List of Edit Actions;
+:Admin edits actions;
+:Save button pressed;
+backward :Discard local changes;
+repeat while (Display: Save Changes?) is ([Discard]) not ([Confirm])
+:Write Changes to Server;
+stop
+else ([False])
+#red:Display: "Authentication Failure please log in";
+end
+@enduml
+

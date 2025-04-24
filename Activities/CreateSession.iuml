@@ -1,0 +1,35 @@
+@startuml CreateSession
+|S1| Mentor
+|S2| Admin
+|S3| Unathenticated
+
+start
+|S1|
+fork
+if(Mentor Authenticated) then ([False])
+#red:Display: "Authentication Failure please log in";
+end
+else([True])
+:Button Clicked: Create Session;
+:Mentor Creates Session;
+:Await Admin Approval;
+endif
+
+
+|S2|
+fork again
+if(Admin Authenticated) then ([False])
+#red:Display: "Authentication Failure please log in";
+end
+else([True])
+endif
+end fork
+:Session Awaits Approval;
+if (Admin Reviews Rquest) then (Request Approved)
+#Green :Session Created in System;
+stop
+else (Request Denied)
+|S1|
+#yellow :Mentor Notified of Rejection;
+stop
+@enduml

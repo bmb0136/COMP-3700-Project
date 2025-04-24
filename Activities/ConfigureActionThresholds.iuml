@@ -1,0 +1,15 @@
+@startuml ConfigureActionThresholds
+start
+if(Admin Authenticated) then ([True])
+repeat :Edit Action Thresholds pressed;
+:Display: Actions and Point Thresolds;
+:Save;
+backward :Discard Local Changes;
+repeat while (Display: Save Changes?) is ([Discard]) not ([Confirm])
+:Write Changes to System;
+stop
+else ([False])
+#red:Display: "Authentication Failure please log in";
+end
+endif
+@enduml

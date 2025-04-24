@@ -1,0 +1,19 @@
+@startuml StartSession
+start
+if(Mentor Authenticated) then ([true])
+if ((Current_Time < Max_Tardiness_Interval) and Session not started) then ([false])
+#yellow :System: MarkMentorAsAbsent;
+stop
+else([True])
+if(Current_Time > Tardiness Interval) then ([True])
+#yellow :System: MarkMentorAsTardy;
+else([False])
+endif
+#green :StartSession;
+endif
+stop
+else ([false])
+#red:Display: "Authentication Failure please log in";
+end
+@enduml
+
