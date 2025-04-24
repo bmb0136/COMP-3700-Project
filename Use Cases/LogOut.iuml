@@ -22,9 +22,9 @@ User -up- LogOut
 
 
 @startuml Log Out Object Model
-class AuthenticationStateManager <<control>> {}
+class IAuthenticationStateManager <<interface>> {}
 class LogOut <<control>> {}
 class LogOutButton <<boundary>> {}
 LogOut --> LogOutButton 
-LogOut --> AuthenticationStateManager
+LogOut --> IAuthenticationStateManager
 @enduml
