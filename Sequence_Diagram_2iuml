@@ -1,14 +1,17 @@
 @startuml
-actor Mentor as m
+actor Mentor as m 
 participant "Report Occurrence" as r
+actor Admin as a
 m -> r: reportButton() 
-r->r: create report
-r-> m: display report window
+r->r: createReport()
+r-> m: displayReportWindow()
 loop number of edits that Mentor does
     m -> r: mentor edits feild in report
+    r -> r: updates report
     r --> m:
 end
-m->r:submit report
-r->r: submit report
-r --> m: displays confromation
+m->r:submitReportButton()
+r->r: submitReport()
+r ->> a: sendNotification()
+r --> m: displayConfromation()
 @enduml
