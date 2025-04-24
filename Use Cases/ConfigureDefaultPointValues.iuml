@@ -21,3 +21,14 @@ Admin -up- ConfDefPts
 3. The Admin modifies the Point values
 4. The Admin clicks a "Save" button
 5. The system displays a confirmation message
+
+@startuml Configure Default Point Values Object Model
+class ConfigureDefaultPointValues <<control>> {}
+class DefaultPointList <<boundary>> {}
+ConfigureDefaultPointValues --> DefaultPointList
+class DefaultPoints <<entity>> {
+  + points: Integer
+}
+DefaultPointList "1" o-- "*" DefaultPoints
+DefaultPoints --> "+ occurrenceType" OccurrenceType
+@enduml

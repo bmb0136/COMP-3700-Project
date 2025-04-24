@@ -35,6 +35,8 @@ class Credentials <<entity>> {
   + username: String
   + passwordHash: Byte[1024]
 }
+abstract class User <<abstract>> {}
+User --> "+ credentials" Credentials
 interface IAuthenticationStateManager <<interface>> {
   + beginSession(user: User): String
   + endSession(token: String)
@@ -45,6 +47,6 @@ interface IPasswordHasher <<interface>> {
 }
 LogIn --> "+ form" LogInForm
 LogIn --> Credentials : Checks >
-LogIn -> "- hasher" IPasswordHasher : Uses >
+LogIn --> "- hasher" IPasswordHasher
 LogIn --> "- authManager" IAuthenticationStateManager
 @enduml

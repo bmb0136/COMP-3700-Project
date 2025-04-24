@@ -25,16 +25,13 @@ Admin -- (Review Occurrence)
 6. The system displays a confirmation message
 
 @startuml Review Occurrence Object
-class ReviewOccurrence <<control>>
-class ReviewOccurrenceButton <<boundry>>
-class ReviewOccurrenceForm <<boundry>> {
-    + editOccurence()
-    + CloseOccurence()
+class ReviewOccurrence <<control>> {}
+class ReviewOccurrenceButton <<boundary>> {}
+class ReviewOccurrenceForm <<boundary>> {
+    + notes: String
 }
-class Occurrence <<entity>> {
-    +occurence: Occurence
-}
+class Occurrence <<entity>> {}
 ReviewOccurrence --> "+ button" ReviewOccurrenceButton
-ReviewOccurrence --> "+ form" ReviewOccurrenceForm: reads >
+ReviewOccurrence --> "+ form" ReviewOccurrenceForm: Reads >
 ReviewOccurrence --> Occurrence
 @enduml
