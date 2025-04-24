@@ -24,3 +24,11 @@ package "Occurrences" {
 # Alternative Flow of Events
 
 1. If the Admin attempts to remove or disable all of the Occurrence types in the list, the system will display an error message and reject the change.
+
+@startuml Configure Occurrence Types Object Model
+class ConfigureOccurrenceTypes <<control>> {}
+class OccurrenceTypeList <<boundary>> {}
+ConfigureOccurrenceTypes --> OccurrenceTypeList
+class OccurrenceType <<entity>> {}
+OccurrenceTypeList "1" o-- "*" OccurrenceType
+@enduml
