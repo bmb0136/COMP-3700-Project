@@ -24,12 +24,14 @@ Admin -up- UpdMtrPts
 
 @startuml Update Mentor Point Total object
 class UpdateMentorPointTotal <<control>>
-class MentorPointManager <<interface>> {
-  + modifyMentorPoints(mentor: Mentor, points: float)
+class UpdateMentorPointsForm <<boundary>> {
+  + newPoints: Integer
 }
-class updateMentorPointsForm <<boundry>> {
-  + modifiedPoints: float
+UpdateMentorPointTotal --> "+ form" UpdateMentorPointsForm
+UpdateMentorPointTotal --> Mentor
+UpdateMentorPointTotal --> PointDelta: Adds to Mentor >
+Mentor "1" *-- "0..*" PointDelta
+class PointDelta  <<entity>> {
+  value: Integer
 }
-UpdateMentorPointTotal --> "+ form" updateMentorPointsForm: Checks > 
-UpdateMentorPointTotal --> MentorPointManager
 @enduml

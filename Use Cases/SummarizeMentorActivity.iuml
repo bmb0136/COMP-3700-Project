@@ -20,14 +20,15 @@ Admin -up- summarize
 2. The system displays a table of Mentor activities, including: profile changes (which they can approve/deny; see RequestSpecialProfileEdit), attendance points, behavior points, and total points.
 
 @startuml Summarize Mentor Activity object
-class SummariseMentorActivity <<control>>
-class MentorActivityForm <<boundry>> {
-  + Mentors: mentor[]
+class SummarizeMentorActivity <<control>> {}
+class MentorSummaryTable <<boundary>> {}
+SummarizeMentorActivity --> MentorSummaryTable
+MentorSummaryTable "1" o-- "0..*" MentorSummary
+class MentorSummary <<entity>> {
+  + attendancePoints: Integer
+  + behaviorPoints: Integer
+  + totalPoints: Integer
 }
-interface MentorActivity <<interface>> {
-  + aproveDenyProfileChanges(aproval: Bolean)
-
-}
-SummariseMentorActivity --> MentorActivityForm
-SummariseMentorActivity --> MentorActivity
+MentorSummary --> "+ mentor" Mentor
+MentorSummary "1" o-- "0..* + profileChanges" ProfileChange
 @enduml
