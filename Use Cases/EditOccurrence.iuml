@@ -40,10 +40,11 @@ class EditOccurrence <<control>> {}
 
 class EditOccurrenceForm <<Boundary>>
 {
-+points: integer
++points: Integer
 +subject: String
 +description: String
 +isAnonymous: Boolean
++date: DateOnly
 }
 class Occurrence <<Entity>>
 {
