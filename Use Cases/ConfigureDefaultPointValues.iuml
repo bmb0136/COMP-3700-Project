@@ -30,5 +30,5 @@ class DefaultPoints <<entity>> {
   + points: Integer
 }
 DefaultPointList "1" o-- "*" DefaultPoints
-DefaultPoints --> "+ occurrenceType" OccurrenceType
+DefaultPoints "+ defaultPoints" -- "+ occurrenceType" OccurrenceType
 @enduml
