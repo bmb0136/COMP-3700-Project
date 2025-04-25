@@ -29,6 +29,8 @@ package "Occurrences" {
 class ConfigureOccurrenceTypes <<control>> {}
 class OccurrenceTypeList <<boundary>> {}
 ConfigureOccurrenceTypes --> OccurrenceTypeList
-class OccurrenceType <<entity>> {}
+class OccurrenceType <<entity>> {
+  + name: String
+}
 OccurrenceTypeList "1" o-- "*" OccurrenceType
 @enduml

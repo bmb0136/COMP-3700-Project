@@ -1,0 +1,126 @@
+@startuml Component Diagram
+component auth [
+  **Authentication**
+  --
+  LogIn
+  LogOut
+  Credentials
+  IPasswordHasher
+  IAuthenticationStateManager
+  User
+  Admin
+]
+component authUI [
+  **Authentication UI**
+  --
+  LogInForm
+  LogOutButton
+]
+
+component notifications [
+  **Notifications**
+  --
+  ConfigureNotificationPreferences
+  NotificationPreferences
+]
+component notificationsUI [
+  **Notifications UI**
+  --
+  NotificationPreferenceForm
+]
+
+component session [
+  **Sessions**
+  --
+  Session
+  AssignSession
+  CreateSession
+  StartSession
+  MarkMentorAsTardy
+]
+component sessionUI [
+  **Sessions UI**
+  --
+  CreateSessionForm
+  AssignSessionForm
+  StartSessionButton
+]
+
+component mentors [
+  **Mentors**
+  --
+  Mentor
+  ProfileSettings
+  PointDelta
+  ProfileChangeRequest
+  ProfilePicture
+  Subject
+  MentorSummary
+  UpdateMentorPointTotal
+  EditProfile
+  OverrideProfile
+  RequestSpecialProfileEdit
+  SummarizeMentorActivity
+]
+component mentorsUI [
+  **Mentors UI**
+  --
+  MentorSummaryTable
+  EditProfileForm
+  UpdateMentorPointsForm
+  SpecialProfileEditApprovalButton
+]
+
+component occurrences [
+  **Occurrences**
+  --
+  Occurrence
+  OccurrenceType
+  Action
+  ActionType
+  ActionThreshold
+  DefaultPoints
+  DefaultAction
+  TardinessInterval
+  ReviewOccurrence
+  CloseOccurrence
+  EditOccurrence
+  ReportOccurrence
+  ConfigureDefaultActionsForOccurrences
+  ConfigureDefaultPointValues
+  ConfigureTardinessIntervals
+  ConfigureActionThresholds
+  ConfigureActionTypes
+  ConfigureOccurrenceTypes
+  MarkMentorAsAbsent
+  QueryOccurrence
+]
+component occurrencesUI [
+  **Occurrences UI**
+  --
+  OccurrenceTypeList
+  TardinessIntervalList
+  DefaultPointList
+  ActionTypeList
+  ViewOccurrenceButton
+  ReviewOccurrenceForm
+  ActionThresholdsForm
+  ReportOccurrenceForm
+  CloseOccurrenceButton
+  EditOccurrenceForm
+  DefaultActionForm
+]
+
+occurrences ..> occurrencesUI
+occurrencesUI ..> occurrences
+session ..> sessionUI
+session ..> occurrences
+session ..> mentors
+occurrences ..> mentors
+mentors ..> mentorsUI
+mentorsUI ..> mentors
+auth ..> authUI
+mentors ..> auth
+auth ..> notifications
+notificationsUI ..> notifications
+@enduml
