@@ -1,4 +1,5 @@
 @startuml StartSession Sequence
+hide footbox
 actor Mentor
 actor AbsenceTimer
 participant ":StartSession" as start
@@ -27,7 +28,7 @@ alt Mentor is not absent
     tardy --> start
   end
   start --> Mentor
-else
+else else
   AbsenceTimer -> absent: markAbsent(session)
   absent -> absent: interval = getMaxTardinessInterval()
   absent -> absent: oa = new Occurrence(...)
