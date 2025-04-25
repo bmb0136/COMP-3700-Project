@@ -35,8 +35,11 @@ Admin -- ConfDefActOcc
 class ConfigureDefaultActionsForOccurrences <<control>> {}
 class DefaultActionForm <<boundary>> {}
 ConfigureDefaultActionsForOccurrences --> DefaultActionForm
-class DefaultAction <<entity>> {}
+class DefaultAction <<entity>> {
+  + occurrenceType: OccurrenceType
+  + actionType: ActionType
+}
 DefaultActionForm "1" o-- "*" DefaultAction
-DefaultAction --> "+ occurrenceType" OccurrenceType
-DefaultAction --> "+ actionType" ActionType
+DefaultAction --> OccurrenceType
+DefaultAction --> ActionType
 @enduml
