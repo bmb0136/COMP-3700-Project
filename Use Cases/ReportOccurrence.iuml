@@ -44,9 +44,11 @@ class Occurrence <<entity>> {
   + description: String
   + date: DateOnly
   + isAnonymous: Boolean
+  + mentor: Mentor
+  + type: OccurrenceType
 }
 ReportOccurrence --> ReportOccurrenceForm
 ReportOccurrence --> Occurrence : Creates >
-Occurrence --> "+ type" OccurrenceType
-Occurrence --> "+ mentor" Mentor
+Occurrence --> OccurrenceType
+Occurrence --> Mentor
 @enduml

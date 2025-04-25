@@ -44,5 +44,8 @@ class Session <<entity>> {
 }
 CreateSession --> "+ form" CreateSessionForm
 CreateSession --> Session
-Session --> "+ mentor" Mentor
+Session --> Mentor
+class Session {
+  + mentor: Mentor
+}
 @enduml

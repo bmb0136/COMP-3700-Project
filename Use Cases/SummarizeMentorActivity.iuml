@@ -28,7 +28,8 @@ class MentorSummary <<entity>> {
   + attendancePoints: Integer
   + behaviorPoints: Integer
   + totalPoints: Integer
+  + mentor: Mentor
 }
-MentorSummary --> "+ mentor" Mentor
+MentorSummary --> Mentor
 MentorSummary "1" o-- "0..* + profileChanges" ProfileChangeRequest
 @enduml

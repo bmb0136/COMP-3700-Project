@@ -1,0 +1,37 @@
+@startuml Edit Profile Sequence
+hide footbox
+actor Mentor
+participant ":EditProfile" as edit
+participant "form:EditProfileForm" as form
+participant ":RequestSpecialProfileEdit" as spec
+actor Admin
+
+Mentor -> edit: editProfile(this)
+edit -> form **: create
+
+Mentor -> form: fill out form
+form --> Mentor
+
+opt form.profilePicture or form.preferredName changed
+  edit -> edit: r = new ProfileChangeRequest(...)
+  note right
+  ProfileChangeRequest r is constructed with:
+  - newPreferredName = form.preferredName
+  - newProfilePicture = form.profilePicture
+  - mentor = mentor
+  end note
+  edit -> spec: requestSpecialEdit(r)
+  Admin -> spec: approveSpecialEdit(x)
+  alt x == true
+  spec -> spec: mentor.profile.profilePicture = request.newProfilePicture
+  spec -> spec: mentor.profile.preferredName = request.newPreferredName
+  spec ->> Mentor: notify("Profile Change Approved")
+  else else
+  spec ->> Mentor: notify("Profile Change Denied")
+  end
+  spec --> Admin
+end
+
+edit -> form !!
+edit --> Mentor
+@enduml 
