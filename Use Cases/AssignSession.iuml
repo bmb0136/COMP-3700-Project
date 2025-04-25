@@ -1,4 +1,4 @@
-@startuml CreateSession
+@startuml Assign Session
 actor :Admin:
 
 package "Sessions" {
@@ -21,3 +21,13 @@ Admin -- Assign
 2. The Admin selects a Mentor to assign
 3. The Admin clicks a "Save" button
 4. The Mentor is notified of the assignment
+
+@startuml Assign Session Object Model
+class AssignSession <<control>> {}
+class AssignSessionForm <<boundary>> {
+  startTime: DateTimeOffset
+}
+AssignSession --> AssignSessionForm
+AssignSession --> Session: Creates >
+AssignSessionForm --> "+ mentor" Mentor
+@enduml
