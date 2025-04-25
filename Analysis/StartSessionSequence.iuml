@@ -7,7 +7,7 @@ participant ":ReportOccurrence" as report
 participant ":MarkMentorAsAbsent" as absent
 
 alt Mentor is not absent
-  Mentor -> start: start()
+  Mentor -> start: start(session)
   start -> start: tardiness = DateTime.Now - this.startTime
   opt tardiness > 0
     start -> tardy: markTardy(tardiness, this.session)
