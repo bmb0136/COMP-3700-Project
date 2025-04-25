@@ -1,4 +1,4 @@
-@startuml Edit Occurrence
+@startuml Query Occurrence
 package "Occurrences"{
 (Query Occurrence)
 }
@@ -20,3 +20,11 @@ Admin -- (Query Occurrence)
 2. The system displays a list of Occurrences, with filters for Occurrence Type and Status
 3. The Admin changes the filters
 4. The system updates the list to reflect the new filters
+
+@startuml Query Occurrence Object Model
+class QueryOccurrence <<control>> {}
+
+QueryOccurrence "1" o-- "*" Occurrence
+
+@enduml
+

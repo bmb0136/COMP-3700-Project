@@ -20,3 +20,41 @@ Mentor -up- Edit
 2. The Mentor edits their personal information
 3. The Mentor clicks a "Save" button
 4. The system displays a confirmation message
+
+
+@startuml Edit Profile Object Model
+class EditProfile <<control>> {}
+class EditProfileForm <<boundary>>
+{
++prefferedName:String
++graduationDate:DateOnly
++phoneNumber:Long
+}
+
+class ProfileSettings <<entity>>
+{
++prefferedName:String
++graduationDate:DateOnly
++phoneNumber:Long
+
+}
+
+class ProfilePicture <<entity>>
+{
+image: file
+}
+
+class Subject <<entity>>
+{
++name: String
+}
+
+EditProfile --> EditProfileForm : Creates >
+EditProfile --> ProfileSettings : Edits >
+EditProfileForm "1" o-- "1" ProfilePicture
+ProfileSettings "1" o-- "1" ProfilePicture
+ProfileSettings "1" o-- "1...*"Subject
+EditProfileForm  "1" o-- "1...*"Subject
+EditProfile --> RequestSpecialProfileEdit: May Invoke
+@enduml
+

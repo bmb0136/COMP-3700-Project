@@ -23,3 +23,15 @@ Admin -- (Review Occurrence)
 4. The Admin add or edit the notes in the form
 5. The Admin clicks a "Save" button
 6. The system displays a confirmation message
+
+@startuml Review Occurrence Object
+class ReviewOccurrence <<control>> {}
+class ReviewOccurrenceButton <<boundary>> {}
+class ReviewOccurrenceForm <<boundary>> {
+    + notes: String
+}
+class Occurrence <<entity>> {}
+ReviewOccurrence --> "+ button" ReviewOccurrenceButton
+ReviewOccurrence --> "+ form" ReviewOccurrenceForm: Reads >
+ReviewOccurrence --> Occurrence
+@enduml

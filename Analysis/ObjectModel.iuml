@@ -1,3 +1,33 @@
 @startuml Tigers4Tigers Object Model
 !include ../style.iuml
+!include ../Use Cases/AssignSession.iuml!1
+!include ../Use Cases/CloseOccurrence.iuml!1
+!include ../Use Cases/ConfigureActionThresholds.iuml!1
+!include ../Use Cases/ConfigureActionTypes.iuml!1
+!include ../Use Cases/ConfigureDefaultActionsForOccurrences.iuml!1
+!include ../Use Cases/ConfigureDefaultPointValues.iuml!1
+!include ../Use Cases/ConfigureNotificationPreferences.iuml!1
+!include ../Use Cases/ConfigureOccurrenceTypes.iuml!1
+!include ../Use Cases/ConfigureTardinessIntervals.iuml!1
+!include ../Use Cases/CreateSession.iuml!1
+!include ../Use Cases/EditOccurrence.iuml!1
+!include ../Use Cases/EditProfile.iuml!1
+!include ../Use Cases/LogIn.iuml!1
+!include ../Use Cases/LogOut.iuml!1
+!include ../Use Cases/MarkMentorAsAbsent.iuml!1
+!include ../Use Cases/MarkMentorAsTardy.iuml!1
+!include ../Use Cases/OverrideProfile.iuml!1
+!include ../Use Cases/QueryOccurrence.iuml!1
+!include ../Use Cases/ReportOccurrence.iuml!1
+!include ../Use Cases/RequestSpecialProfileEdit.iuml!1
+!include ../Use Cases/ReviewOccurrence.iuml!1
+!include ../Use Cases/StartSession.iuml!1
+!include ../Use Cases/SummarizeMentorActivity.iuml!1
+!include ../Use Cases/UpdateMentorPointTotal.iuml!1
+
+abstract class User <<abstract>> {}
+class Admin {}
+class Mentor {}
+Mentor --|> User
+Admin --|> User
 @enduml

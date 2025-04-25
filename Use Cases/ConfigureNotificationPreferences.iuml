@@ -19,3 +19,12 @@ Mentor -right- notifPref
 1. The Mentor selects the Notifications they want to receive
 2. The Mentor clicks a "Save" button
 3. The system saves the notification preferences
+
+@startuml Configure Notification Preferences Object Model
+class ConfigureNotificationPreferences <<control>> {}
+class NotificationPreferenceForm <<boundary>> {}
+class NotificationPreferences <<entity>> {}
+NotificationPreferenceForm --> NotificationPreferences
+ConfigureNotificationPreferences --> NotificationPreferences
+User --> "+ notificationPreferences" NotificationPreferences
+@enduml

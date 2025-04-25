@@ -1,3 +1,9 @@
 {
-  "plantuml.exportOutDir": "render/"
+  "plantuml.exportOutDir": "render/",
+  "cSpell.words": [
+    "enduml",
+    "iuml",
+    "skinparam",
+    "startuml"
+  ]
 }

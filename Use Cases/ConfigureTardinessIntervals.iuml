@@ -30,3 +30,14 @@ Admin -up- ConfTardInt
 
 - The intervals should be displayed in minutes
 - Other than the first interval, the start time of each interval should be fixed as the end time of the previous interval
+
+@startuml Configure Tardiness Intervals Object Model
+class ConfigureTardinessIntervals <<control>> {}
+class TardinessIntervalList <<boundary>> {}
+ConfigureTardinessIntervals --> TardinessIntervalList
+class TardinessInterval <<entity>> {
+  + minutes: Integer
+  + points: Integer
+}
+TardinessIntervalList "1" o-- "*" TardinessInterval
+@enduml

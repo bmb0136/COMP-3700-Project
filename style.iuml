@@ -6,6 +6,7 @@
 hide circle
 ' Use +-#~ symbols for visibility on classes
 skinparam classAttributeIconSize 0
+skinparam classBackgroundColor White
 
 '
 ' ACTIVITY DIAGRAMS

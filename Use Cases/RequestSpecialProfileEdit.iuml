@@ -31,3 +31,19 @@ Admin -up-- req
 
 2a. The Admin rejects the request
 3a. The system notifies the Mentor of the rejection
+
+@startuml Request Special Profile Edit Object Diagram
+class RequestSpecialProfileEdit <<control>> {}
+
+class SpecialProfileEditApprovalButton
+{
+approved: boolean
+}
+RequestSpecialProfileEdit --> SpecialProfileEditApprovalButton: creates
+RequestSpecialProfileEdit --> ProfileChangeRequest: Creates >
+class ProfileChangeRequest <<entity>> {
+  + newPreferredName: String
+  + newProfilePicture: File
+}
+ProfileChangeRequest --> "+ mentor" Mentor
+@enduml

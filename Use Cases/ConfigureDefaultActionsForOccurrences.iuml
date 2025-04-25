@@ -1,4 +1,4 @@
-@startuml My Use Case
+@startuml Configure Default Actions for Occurrences
 actor :Admin:
 package "Occurrences" {
   (Configure Default Actions\nfor Occurrences) as ConfDefActOcc
@@ -30,3 +30,13 @@ Admin -- ConfDefActOcc
 7a. The system discards the changes and displays a confirmation message
 6b. The Admin clicks a "No" button
 7b. The system returns the Admin to the list
+
+@startuml Configure Default Actions for Occurrences Object Model
+class ConfigureDefaultActionsForOccurrences <<control>> {}
+class DefaultActionForm <<boundary>> {}
+ConfigureDefaultActionsForOccurrences --> DefaultActionForm
+class DefaultAction <<entity>> {}
+DefaultActionForm "1" o-- "*" DefaultAction
+DefaultAction --> "+ occurrenceType" OccurrenceType
+DefaultAction --> "+ actionType" ActionType
+@enduml

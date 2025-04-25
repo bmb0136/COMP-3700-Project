@@ -22,3 +22,11 @@ Admin -- (Close Occurrence)
 
 2. The system notifies the Mentor the Occurrence is associated with that the Occurrence was closed
 1. The system displays a confirmation message
+
+@startuml Close Occurrence Object Model
+class CloseOccurrence <<control>> {}
+class CloseOccurrenceButton <<boundary>> {}
+CloseOccurrence --> CloseOccurrenceButton
+class Occurrence <<entity>> {}
+CloseOccurrence --> Occurrence : Closes >
+@enduml

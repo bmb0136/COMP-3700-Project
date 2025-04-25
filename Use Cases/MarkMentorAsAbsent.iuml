@@ -20,3 +20,8 @@ MarkAbsent ..> (Report Occurrence) : <<include>>
 # Flow of Events
 
 1. **include** ReportOccurrence
+
+@startuml Mark Mentor as Absent Object Model
+class MarkMentorAsAbsent <<control>> {}
+MarkMentorAsAbsent --> Occurrence : Creates >
+@enduml
