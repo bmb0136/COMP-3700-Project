@@ -44,6 +44,7 @@ RequestSpecialProfileEdit --> ProfileChangeRequest: Creates >
 class ProfileChangeRequest <<entity>> {
   + newPreferredName: String
   + newProfilePicture: File
+  + mentor: Mentor
 }
-ProfileChangeRequest --> "+ mentor" Mentor
+ProfileChangeRequest --> Mentor
 @enduml

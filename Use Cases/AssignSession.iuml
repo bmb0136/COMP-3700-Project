@@ -25,9 +25,10 @@ Admin -- Assign
 @startuml Assign Session Object Model
 class AssignSession <<control>> {}
 class AssignSessionForm <<boundary>> {
-  startTime: DateTimeOffset
+  + startTime: DateTimeOffset
+  + mentor: Mentor
 }
 AssignSession --> AssignSessionForm
 AssignSession --> Session: Creates >
-AssignSessionForm --> "+ mentor" Mentor
+AssignSessionForm --> Mentor
 @enduml
