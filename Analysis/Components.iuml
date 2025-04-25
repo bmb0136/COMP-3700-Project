@@ -1,0 +1,96 @@
+@startuml Component Diagram
+component auth [
+  **Authentication**
+  --
+  LogIn
+  LogOut
+  Credentials
+  IPasswordHasher
+  IAuthenticationStateManager
+  User
+  Admin
+]
+component authUI [
+  **Authentication UI**
+  --
+  NotificationPreferenceForm
+]
+authUI ..> auth
+
+component notifications [
+  **Notifications**
+  --
+  ConfigureNotificationPreferences
+  NotificationPreferences
+]
+notifications <.. auth
+
+component session [
+  **Sessions**
+  --
+  Session
+  AssignSession
+  CreateSession
+  StartSession
+]
+component sessionUI [
+  **Sessions UI**
+  --
+  CreateSessionForm
+  AssignSessionForm
+  StartSessionButton
+]
+session ..> sessionUI
+
+component mentors [
+  **Mentors**
+  --
+  Mentor
+  ProfileSettings
+  PointDelta
+  ProfileChangeRequest
+  ProfilePicture
+  Subject
+  MentorSummary
+  UpdateMentorPointTotal
+  EditProfile
+  OverrideProfile
+  RequestSpecialProfileEdit
+]
+component mentorsUI [
+  **Mentors UI**
+  --
+  SummarizeMentorActivity
+  MentorSummaryTable
+  EditProfileForm
+]
+mentors ..> auth
+mentorsUI ..> mentors
+session ..> mentors
+
+component occurrences [
+  **Occurrences**
+  --
+  Occurrence
+  OccurrenceType
+  Action
+  ActionType
+  ActionTypeList
+  ActionThreshold
+  DefaultPoints
+  TardinessInterval
+  TardinessIntervalList
+  ConfigureDefaultActionsForOccurrences
+  ConfigureDefaultPointValues
+  ConfigureTardinessIntervals
+]
+component occurrencesUI [
+  **Occurrences UI**
+  --
+  OccurrenceTypeList
+  DefaultPointList
+]
+occurrences ..> occurrencesUI
+session ..> occurrences
+
+@enduml
