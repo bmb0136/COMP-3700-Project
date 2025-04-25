@@ -26,17 +26,18 @@ Mentor -up- Edit
 class EditProfile <<control>> {}
 class EditProfileForm <<boundary>>
 {
-+prefferedName:String
++preferredName:String
 +graduationDate:DateOnly
 +phoneNumber:Long
++picture:ProfilePicture
 }
 
 class ProfileSettings <<entity>>
 {
-+prefferedName:String
++person:String
 +graduationDate:DateOnly
 +phoneNumber:Long
-
++picture:ProfilePicture
 }
 
 class ProfilePicture <<entity>>

@@ -1,0 +1,49 @@
+@startuml StartSession Sequence
+hide footbox
+actor Mentor
+actor AbsenceTimer
+participant ":StartSession" as start
+participant ":MarkMentorAsTardy" as tardy
+participant ":ReportOccurrence" as report
+participant ":MarkMentorAsAbsent" as absent
+
+alt Mentor is not absent
+  Mentor -> start: start(session)
+  start -> start: tardiness = DateTime.Now - this.startTime
+  opt tardiness > 0
+    start -> tardy: markTardy(tardiness, this.session)
+    tardy -> tardy: ot = new Occurrence(...)
+    note right
+    Occurrence ot is constructed as follows:
+    - type = Attendance
+    - points = getPointsForInterval(tardiness)
+    - mentor = session.mentor
+    - subject = "Mentor Tardy"
+    - description = $"{session.mentor} was late for session {session} by {tardiness}"
+    - date = (DateOnly)session.startTime
+    - isAnonymous = false
+    end note
+    tardy -> report: report(ot)
+    report --> tardy
+    tardy --> start
+  end
+  start --> Mentor
+else else
+  AbsenceTimer -> absent: markAbsent(session)
+  absent -> absent: interval = getMaxTardinessInterval()
+  absent -> absent: oa = new Occurrence(...)
+  note right
+  Occurrence oa is constructed as follows:
+  - type = Attendance
+  - points = interval.points
+  - mentor = session.mentor
+  - subject = "Mentor Absent"
+  - description = $"{session.mentor} was absent for session {session}"
+  - date = (DateOnly)session.startTime
+  - isAnonymous = false
+  end note
+  absent -> report: report(oa)
+  report --> absent
+  absent --> AbsenceTimer
+end
+@enduml
