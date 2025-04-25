@@ -1,0 +1,39 @@
+@startuml ArcitectureDiagram
+skinparam componentStyle rectangle
+
+package "Presentation Layer" {
+  [Admin Dashboard]
+  [Mentor Dashboard]
+  [Login Page]
+}
+
+package "Business Logic Layer" {
+  [Session Manager]
+  [Occurrence Handler]
+  [Auth Controller]
+}
+
+package "Data Access Layer" {
+  [User Repository]
+  [Session Repository]
+  [Occurrence Repository]
+}
+
+' Presentation -> Business Logic
+[Login Page] --> [Auth Controller]
+'[Admin Dashboard] --> [Auth Controller]
+'[Mentor Dashboard] --> [Auth Controller]
+[Admin Dashboard] --> [Session Manager]
+[Mentor Dashboard] --> [Session Manager]
+[Admin Dashboard] --> [Session Repository]
+[Admin Dashboard] --> [Occurrence Repository]
+
+' Business Logic -> Data
+[Auth Controller] --> [Admin Dashboard]
+[Auth Controller] --> [Mentor Dashboard]
+[Session Manager] -left-> [Occurrence Handler]
+[Auth Controller] --> [User Repository]
+[Session Manager] --> [Session Repository]
+[Occurrence Handler] --> [Occurrence Repository]
+
+' Internal Business Logic connections
