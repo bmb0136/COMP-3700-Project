@@ -26,12 +26,10 @@ Admin -- (Review Occurrence)
 
 @startuml Review Occurrence Object
 class ReviewOccurrence <<control>> {}
-class ReviewOccurrenceButton <<boundary>> {}
 class ReviewOccurrenceForm <<boundary>> {
     + notes: String
 }
 class Occurrence <<entity>> {}
-ReviewOccurrence --> "+ button" ReviewOccurrenceButton
 ReviewOccurrence --> "+ form" ReviewOccurrenceForm: Reads >
 ReviewOccurrence --> Occurrence
 @enduml

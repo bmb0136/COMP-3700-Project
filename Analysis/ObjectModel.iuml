@@ -27,7 +27,7 @@ left to right direction
 !include ../Use Cases/UpdateMentorPointTotal.iuml!1
 
 abstract class User <<abstract>> {}
-class Admin {}
+class Admin <<entity>> {}
 class Mentor {}
 Mentor --|> User
 Admin --|> User
