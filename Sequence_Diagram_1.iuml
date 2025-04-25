@@ -1,4 +1,53 @@
 @startuml
+participant StartSession order 4 
+participant MarkMentorAsTardy order 5
+participant Occurrence order 6
+participant Mentor order 8
+participant Session order 3
+participant CreateSession order 1
+participant CreateSessionFrom order 2
+participant OccurrenceType order 7
+
+== Makeing of the Session ==
+-> CreateSession
+activate CreateSession
+CreateSession -> CreateSessionFrom: 
+activate CreateSessionFrom
+CreateSessionFrom -> CreateSessionFrom: readInData()
+CreateSessionFrom --> CreateSession: passSessionData()
+destroy CreateSessionFrom
+CreateSession ->> Session: createSession()
+CreateSession ->> Mentor: notifyMentor()
+destroy CreateSession
+== Using of the Session ==
+
+Mentor->StartSession: startSession(Session)
+activate StartSession
+StartSession -> Session: grabSession()
+Session --> StartSession
+StartSession -> StartSession: CalculateTardy
+activate StartSession
+StartSession -> MarkMentorAsTardy: sessionInformation()
+activate MarkMentorAsTardy
+MarkMentorAsTardy -> Occurrence: Declair Occurrence
+Occurrence -> OccurrenceType: OccurrenceType(Tardy)
+OccurrenceType --> Occurrence
+Occurrence -> Occurrence: create new Occurrence
+Occurrence --> MarkMentorAsTardy
+MarkMentorAsTardy ->> Session: markMentorAsTardy()
+MarkMentorAsTardy --> StartSession
+destroy MarkMentorAsTardy
+deactivate StartSession
+... Until end of Session ...
+StartSession ->> Session: endofsession() 
+StartSession ->> Mentor: endofsession()
+deactivate StartSession
+Occurrence ->> Mentor: notify(Tardy)
+
+@enduml
+
+/'
+@startuml
 actor Mentor
 participant "Start Session" as start
 participant "Mark Mentor as Tardy" as tardy
@@ -21,7 +70,7 @@ participant "Report Occurrence" as report
             tardy -> tardy: interval is valid
             
             end
-        end'/
+        end                                      add comment brake ->
         opt interval is valid
             tardy -> tardy: create report
             tardy -> report: send report data
@@ -36,6 +85,8 @@ participant "Report Occurrence" as report
     timer -> absent: end of sesson occurres
     absent -> report: send report data
     report -> report: submit Report to Admin
-end'/
+end                                              add comment brake ->
     start --> Mentor
 @enduml
+
+'/
